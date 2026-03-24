@@ -1,0 +1,20 @@
+{
+  "name": "makoto-watch-bot",
+  "version": "1.0.0",
+  "description": "Makoto watch bot for Discord notifications",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "check": "node --check src/main.js",
+    "playwright:install": "playwright install chromium"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "dotenv": "^17.3.1",
+    "playwright": "^1.58.2"
+  }
+}
