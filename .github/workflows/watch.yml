@@ -33,6 +33,7 @@ jobs:
       - name: Run watcher
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_USERNAME: まことちゃん通知
           PROFILE_URL: ${{ vars.PROFILE_URL || 'https://m-surprise.com/profile/?id=4967' }}
           DIARY_URL: ${{ vars.DIARY_URL || 'https://diary.m-surprise.com/category/no-75-%e3%81%be%e3%81%93%e3%81%a8/' }}
           TIMEZONE: Asia/Tokyo

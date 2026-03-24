@@ -32,9 +32,7 @@ async function main() {
       await writeJson(config.dataPaths.latest, currentSnapshot);
 
       if (config.notifyInitialSnapshot) {
-        await notifyDiscord(["\ud83c\udd95 \u521d\u671f\u30b9\u30ca\u30c3\u30d7\u30b7\u30e7\u30c3\u30c8\u4f5c\u6210\u5b8c\u4e86"], {
-          header: "\u307e\u3053\u3068\u3061\u3083\u3093\u76e3\u8996BOT",
-        });
+        await notifyDiscord(["\ud83c\udd95 \u521d\u671f\u30b9\u30ca\u30c3\u30d7\u30b7\u30e7\u30c3\u30c8\u4f5c\u6210\u5b8c\u4e86"]);
       }
 
       console.log("Initial snapshot saved");
@@ -44,10 +42,7 @@ async function main() {
     const events = collectEvents(previousLatest, currentSnapshot);
 
     if (events.length > 0) {
-      await notifyDiscord(
-        events.map((event) => event.message),
-        { header: "\u307e\u3053\u3068\u3061\u3083\u3093\u76e3\u8996BOT" },
-      );
+      await notifyDiscord(events.map((event) => event.message));
     }
 
     await writeJson(config.dataPaths.previous, previousLatest);
@@ -58,13 +53,10 @@ async function main() {
     console.error("[main] execution failed", error);
 
     try {
-      await notifyDiscord(
-        [
-          "\u26a0\ufe0f \u76e3\u8996BOT\u3067\u30a8\u30e9\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f",
-          `\u5185\u5bb9: ${error.message}`,
-        ],
-        { header: "\u307e\u3053\u3068\u3061\u3083\u3093\u76e3\u8996BOT" },
-      );
+      await notifyDiscord([
+        "\u26a0\ufe0f \u76e3\u8996BOT\u3067\u30a8\u30e9\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f",
+        `\u5185\u5bb9: ${error.message}`,
+      ]);
     } catch (notifyError) {
       console.error("[main] failed to notify error", notifyError);
     }
