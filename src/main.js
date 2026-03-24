@@ -42,7 +42,7 @@ async function main() {
     const events = collectEvents(previousLatest, currentSnapshot);
 
     if (events.length > 0) {
-      await notifyDiscord(events.map((event) => event.message));
+      await notifyDiscord(events.map((event) => formatEventMessage(event, currentSnapshot)));
     }
 
     await writeJson(config.dataPaths.previous, previousLatest);
@@ -86,6 +86,19 @@ function collectEvents(previousSnapshot, currentSnapshot) {
   }
 
   return events;
+}
+
+function formatEventMessage(event, snapshot) {
+  const url = event.url || resolveCategoryUrl(event.category, snapshot);
+  return url ? `${event.message} ${url}` : event.message;
+}
+
+function resolveCategoryUrl(category, snapshot) {
+  if (category === "diary") {
+    return snapshot.source?.diaryUrl || config.diaryUrl;
+  }
+
+  return snapshot.source?.profileUrl || config.profileUrl;
 }
 
 main();
