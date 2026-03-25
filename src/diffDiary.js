@@ -1,7 +1,6 @@
 ﻿function diffDiary(previous = [], current = []) {
   const events = [];
   const previousMap = new Map(previous.map((entry) => [entry.id, entry]));
-  const currentMap = new Map(current.map((entry) => [entry.id, entry]));
 
   for (const entry of current) {
     const before = previousMap.get(entry.id);
@@ -48,17 +47,6 @@
         kind: "date_changed",
         id: entry.id,
         message: `\ud83d\udcd4 \u5199\u30e1\u65e5\u8a18\u66f4\u65b0: \u300c${entry.title}\u300d\u306e\u65e5\u4ed8\u304c\u5909\u66f4\u3055\u308c\u307e\u3057\u305f`,
-      });
-    }
-  }
-
-  for (const entry of previous) {
-    if (!currentMap.has(entry.id)) {
-      events.push({
-        category: "diary",
-        kind: "removed",
-        id: entry.id,
-        message: `\ud83d\udcd4 \u5199\u30e1\u65e5\u8a18\u66f4\u65b0: \u300c${entry.title}\u300d\u304c\u524a\u9664\u3055\u308c\u307e\u3057\u305f`,
       });
     }
   }
