@@ -89,16 +89,8 @@ function collectEvents(previousSnapshot, currentSnapshot) {
 }
 
 function formatEventMessage(event, snapshot) {
-  const url = event.url || resolveCategoryUrl(event.category, snapshot);
+  const url = snapshot.source?.profileUrl || config.profileUrl;
   return url ? `${event.message} ${url}` : event.message;
-}
-
-function resolveCategoryUrl(category, snapshot) {
-  if (category === "diary") {
-    return snapshot.source?.diaryUrl || config.diaryUrl;
-  }
-
-  return snapshot.source?.profileUrl || config.profileUrl;
 }
 
 main();
