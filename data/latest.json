@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-03-26T07:49:55.352Z",
+  "fetchedAt": "2026-03-26T08:36:52.505Z",
   "source": {
     "profileUrl": "https://m-surprise.com/profile/?id=4967",
     "diaryUrl": "https://diary.m-surprise.com/category/no-75-%e3%81%be%e3%81%93%e3%81%a8/"
@@ -54,13 +54,15 @@
       "type": "off"
     },
     "2026-03-30": {
-      "type": "off"
+      "type": "work",
+      "start": "10:00",
+      "end": "18:00"
     },
     "2026-03-31": {
       "type": "off"
     },
     "2026-04-01": {
-      "type": "pending"
+      "type": "off"
     }
   },
   "diary": [
