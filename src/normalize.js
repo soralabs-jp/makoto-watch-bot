@@ -103,6 +103,14 @@ function formatScheduleEntry(entry) {
     return "\u304a\u4f11\u307f";
   }
 
+  if (entry.type === "pending") {
+    return "\u8981\u78ba\u8a8d";
+  }
+
+  if (entry.type === "unknown") {
+    return entry.raw || "\u4e0d\u660e";
+  }
+
   return `${entry.start || "??:??"}-${entry.end || "??:??"}`;
 }
 

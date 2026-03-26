@@ -146,6 +146,11 @@ function extractSchedule($, fetchedAt) {
       continue;
     }
 
+    if (text.includes("\u8981\u78ba\u8a8d")) {
+      schedule[date] = { type: "pending" };
+      continue;
+    }
+
     if (times.length >= 2) {
       schedule[date] = {
         type: "work",

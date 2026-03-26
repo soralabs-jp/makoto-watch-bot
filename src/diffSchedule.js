@@ -22,6 +22,8 @@ function diffSchedule(previous = {}, current = {}) {
         events.push(createEvent("off_added", date, null, after));
       } else if (after.type === "work") {
         events.push(createEvent("work_added", date, null, after));
+      } else if (after.type === "pending") {
+        events.push(createEvent("pending_added", date, null, after));
       } else {
         events.push(createEvent("schedule_added", date, null, after));
       }
@@ -86,6 +88,8 @@ function formatScheduleMessage(kind, date, before, after) {
       return `\ud83d\udfe2 \u51fa\u52e4\u8ffd\u52a0: ${shortDate} ${formatScheduleEntry(after)}`;
     case "off_added":
       return `\ud83d\udca4 \u304a\u4f11\u307f\u8ffd\u52a0: ${shortDate}`;
+    case "pending_added":
+      return `\ud83d\udfe1 \u8981\u78ba\u8a8d\u8ffd\u52a0: ${shortDate}`;
     case "off_to_work":
       return `\ud83d\udd04 \u5909\u66f4: ${shortDate} \u304a\u4f11\u307f -> ${formatScheduleEntry(after)}`;
     case "work_to_off":
