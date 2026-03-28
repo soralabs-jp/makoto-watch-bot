@@ -3,12 +3,1602 @@
   "importedAt": "2026-03-28T08:53:17.132Z",
   "shifts": [
     {
+      "id": "fc2-history-2023-10-17",
+      "date": "2023-10-17",
+      "status": "working",
+      "startTime": "13:00",
+      "endTime": "18:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年10月 後半:2023-10-17"
+    },
+    {
+      "id": "fc2-history-2023-10-25",
+      "date": "2023-10-25",
+      "status": "working",
+      "startTime": "12:00",
+      "endTime": "20:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年10月 後半:2023-10-25"
+    },
+    {
+      "id": "fc2-history-2023-10-30",
+      "date": "2023-10-30",
+      "status": "working",
+      "startTime": "12:00",
+      "endTime": "20:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年10月 後半:2023-10-30"
+    },
+    {
+      "id": "fc2-history-2023-11-06",
+      "date": "2023-11-06",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "20:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年11月 前半:2023-11-06"
+    },
+    {
+      "id": "fc2-history-2023-11-08",
+      "date": "2023-11-08",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "20:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年11月 前半:2023-11-08"
+    },
+    {
+      "id": "fc2-history-2023-11-13",
+      "date": "2023-11-13",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "17:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年11月 前半:2023-11-13"
+    },
+    {
+      "id": "fc2-history-2023-11-20",
+      "date": "2023-11-20",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "20:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年11月 後半:2023-11-20"
+    },
+    {
+      "id": "fc2-history-2023-12-07",
+      "date": "2023-12-07",
+      "status": "working",
+      "startTime": "15:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年12月 前半:2023-12-07"
+    },
+    {
+      "id": "fc2-history-2023-12-11",
+      "date": "2023-12-11",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "20:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年12月 前半:2023-12-11"
+    },
+    {
+      "id": "fc2-history-2023-12-13",
+      "date": "2023-12-13",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "18:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年12月 前半:2023-12-13"
+    },
+    {
+      "id": "fc2-history-2023-12-14",
+      "date": "2023-12-14",
+      "status": "working",
+      "startTime": "15:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年12月 前半:2023-12-14"
+    },
+    {
+      "id": "fc2-history-2023-12-18",
+      "date": "2023-12-18",
+      "status": "working",
+      "startTime": "15:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年12月 後半:2023-12-18"
+    },
+    {
+      "id": "fc2-history-2023-12-21",
+      "date": "2023-12-21",
+      "status": "working",
+      "startTime": "15:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年12月 後半:2023-12-21"
+    },
+    {
+      "id": "fc2-history-2023-12-25",
+      "date": "2023-12-25",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "20:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年12月 後半:2023-12-25"
+    },
+    {
+      "id": "fc2-history-2023-12-26",
+      "date": "2023-12-26",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "20:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年12月 後半:2023-12-26"
+    },
+    {
+      "id": "fc2-history-2023-12-27",
+      "date": "2023-12-27",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "20:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2023年12月 後半:2023-12-27"
+    },
+    {
+      "id": "fc2-history-2024-01-03",
+      "date": "2024-01-03",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "20:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年1月 前半:2024-01-03"
+    },
+    {
+      "id": "fc2-history-2024-01-04",
+      "date": "2024-01-04",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "20:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年1月 前半:2024-01-04"
+    },
+    {
+      "id": "fc2-history-2024-01-24",
+      "date": "2024-01-24",
+      "status": "working",
+      "startTime": "13:00",
+      "endTime": "20:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年1月 後半:2024-01-24"
+    },
+    {
+      "id": "fc2-history-2024-02-03",
+      "date": "2024-02-03",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "18:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年2月 前半:2024-02-03"
+    },
+    {
+      "id": "fc2-history-2024-02-10",
+      "date": "2024-02-10",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年2月 前半:2024-02-10"
+    },
+    {
+      "id": "fc2-history-2024-02-24",
+      "date": "2024-02-24",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年2月 後半:2024-02-24"
+    },
+    {
+      "id": "fc2-history-2024-03-02",
+      "date": "2024-03-02",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年3月 前半:2024-03-02"
+    },
+    {
+      "id": "fc2-history-2024-03-13",
+      "date": "2024-03-13",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年3月 前半:2024-03-13"
+    },
+    {
+      "id": "fc2-history-2024-03-17",
+      "date": "2024-03-17",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年3月 後半:2024-03-17"
+    },
+    {
+      "id": "fc2-history-2024-03-18",
+      "date": "2024-03-18",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "18:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年3月 後半:2024-03-18"
+    },
+    {
+      "id": "fc2-history-2024-03-19",
+      "date": "2024-03-19",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "18:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年3月 後半:2024-03-19"
+    },
+    {
+      "id": "fc2-history-2024-03-23",
+      "date": "2024-03-23",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年3月 後半:2024-03-23"
+    },
+    {
+      "id": "fc2-history-2024-03-26",
+      "date": "2024-03-26",
+      "status": "working",
+      "startTime": "15:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年3月 後半:2024-03-26"
+    },
+    {
+      "id": "fc2-history-2024-03-30",
+      "date": "2024-03-30",
+      "status": "working",
+      "startTime": "15:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年3月 後半:2024-03-30"
+    },
+    {
+      "id": "fc2-history-2024-03-31",
+      "date": "2024-03-31",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年3月 後半:2024-03-31"
+    },
+    {
+      "id": "fc2-history-2024-04-05",
+      "date": "2024-04-05",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年4月 前半:2024-04-05"
+    },
+    {
+      "id": "fc2-history-2024-04-07",
+      "date": "2024-04-07",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年4月 前半:2024-04-07"
+    },
+    {
+      "id": "fc2-history-2024-04-09",
+      "date": "2024-04-09",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年4月 前半:2024-04-09"
+    },
+    {
+      "id": "fc2-history-2024-04-10",
+      "date": "2024-04-10",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年4月 前半:2024-04-10"
+    },
+    {
+      "id": "fc2-history-2024-04-12",
+      "date": "2024-04-12",
+      "status": "working",
+      "startTime": "15:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年4月 前半:2024-04-12"
+    },
+    {
+      "id": "fc2-history-2024-04-18",
+      "date": "2024-04-18",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年4月 後半:2024-04-18"
+    },
+    {
+      "id": "fc2-history-2024-04-21",
+      "date": "2024-04-21",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年4月 後半:2024-04-21"
+    },
+    {
+      "id": "fc2-history-2024-04-27",
+      "date": "2024-04-27",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年4月 後半:2024-04-27"
+    },
+    {
+      "id": "fc2-history-2024-05-04",
+      "date": "2024-05-04",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年5月 前半:2024-05-04"
+    },
+    {
+      "id": "fc2-history-2024-05-05",
+      "date": "2024-05-05",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年5月 前半:2024-05-05"
+    },
+    {
+      "id": "fc2-history-2024-05-11",
+      "date": "2024-05-11",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年5月 前半:2024-05-11"
+    },
+    {
+      "id": "fc2-history-2024-05-19",
+      "date": "2024-05-19",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "18:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年5月 後半:2024-05-19"
+    },
+    {
+      "id": "fc2-history-2024-05-26",
+      "date": "2024-05-26",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "17:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年5月 後半:2024-05-26"
+    },
+    {
+      "id": "fc2-history-2024-06-02",
+      "date": "2024-06-02",
+      "status": "working",
+      "startTime": "11:00",
+      "endTime": "18:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年6月 前半:2024-06-02"
+    },
+    {
+      "id": "fc2-history-2024-06-08",
+      "date": "2024-06-08",
+      "status": "working",
+      "startTime": "15:00",
+      "endTime": "21:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2024年6月 前半:2024-06-08"
+    },
+    {
+      "id": "fc2-history-2025-03-01",
+      "date": "2025-03-01",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "18:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年3月 前半:2025-03-01"
+    },
+    {
+      "id": "fc2-history-2025-03-02",
+      "date": "2025-03-02",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年3月 前半:2025-03-02"
+    },
+    {
+      "id": "fc2-history-2025-03-08",
+      "date": "2025-03-08",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年3月 前半:2025-03-08"
+    },
+    {
+      "id": "fc2-history-2025-03-15",
+      "date": "2025-03-15",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年3月 前半:2025-03-15"
+    },
+    {
+      "id": "fc2-history-2025-03-16",
+      "date": "2025-03-16",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年3月 後半:2025-03-16"
+    },
+    {
+      "id": "fc2-history-2025-03-23",
+      "date": "2025-03-23",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年3月 後半:2025-03-23"
+    },
+    {
+      "id": "fc2-history-2025-03-29",
+      "date": "2025-03-29",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "18:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年3月 後半:2025-03-29"
+    },
+    {
+      "id": "fc2-history-2025-03-30",
+      "date": "2025-03-30",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年3月 後半:2025-03-30"
+    },
+    {
+      "id": "fc2-history-2025-04-06",
+      "date": "2025-04-06",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年4月 前半:2025-04-06"
+    },
+    {
+      "id": "fc2-history-2025-04-12",
+      "date": "2025-04-12",
+      "status": "working",
+      "startTime": "12:00",
+      "endTime": "17:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年4月 前半:2025-04-12"
+    },
+    {
+      "id": "fc2-history-2025-04-13",
+      "date": "2025-04-13",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年4月 前半:2025-04-13"
+    },
+    {
+      "id": "fc2-history-2025-04-16",
+      "date": "2025-04-16",
+      "status": "working",
+      "startTime": "20:30",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年4月 後半:2025-04-16"
+    },
+    {
+      "id": "fc2-history-2025-04-18",
+      "date": "2025-04-18",
+      "status": "working",
+      "startTime": "20:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年4月 後半:2025-04-18"
+    },
+    {
+      "id": "fc2-history-2025-04-20",
+      "date": "2025-04-20",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年4月 後半:2025-04-20"
+    },
+    {
+      "id": "fc2-history-2025-04-21",
+      "date": "2025-04-21",
+      "status": "working",
+      "startTime": "20:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年4月 後半:2025-04-21"
+    },
+    {
+      "id": "fc2-history-2025-04-23",
+      "date": "2025-04-23",
+      "status": "working",
+      "startTime": "20:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年4月 後半:2025-04-23"
+    },
+    {
+      "id": "fc2-history-2025-04-26",
+      "date": "2025-04-26",
+      "status": "working",
+      "startTime": "15:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年4月 後半:2025-04-26"
+    },
+    {
+      "id": "fc2-history-2025-04-27",
+      "date": "2025-04-27",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年4月 後半:2025-04-27"
+    },
+    {
+      "id": "fc2-history-2025-05-03",
+      "date": "2025-05-03",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 前半:2025-05-03"
+    },
+    {
+      "id": "fc2-history-2025-05-04",
+      "date": "2025-05-04",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 前半:2025-05-04"
+    },
+    {
+      "id": "fc2-history-2025-05-06",
+      "date": "2025-05-06",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 前半:2025-05-06"
+    },
+    {
+      "id": "fc2-history-2025-05-07",
+      "date": "2025-05-07",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 前半:2025-05-07"
+    },
+    {
+      "id": "fc2-history-2025-05-10",
+      "date": "2025-05-10",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 前半:2025-05-10"
+    },
+    {
+      "id": "fc2-history-2025-05-11",
+      "date": "2025-05-11",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 前半:2025-05-11"
+    },
+    {
+      "id": "fc2-history-2025-05-12",
+      "date": "2025-05-12",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 前半:2025-05-12"
+    },
+    {
+      "id": "fc2-history-2025-05-13",
+      "date": "2025-05-13",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 前半:2025-05-13"
+    },
+    {
+      "id": "fc2-history-2025-05-15",
+      "date": "2025-05-15",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 前半:2025-05-15"
+    },
+    {
+      "id": "fc2-history-2025-05-16",
+      "date": "2025-05-16",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 後半:2025-05-16"
+    },
+    {
+      "id": "fc2-history-2025-05-17",
+      "date": "2025-05-17",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 後半:2025-05-17"
+    },
+    {
+      "id": "fc2-history-2025-05-20",
+      "date": "2025-05-20",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 後半:2025-05-20"
+    },
+    {
+      "id": "fc2-history-2025-05-21",
+      "date": "2025-05-21",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 後半:2025-05-21"
+    },
+    {
+      "id": "fc2-history-2025-05-23",
+      "date": "2025-05-23",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 後半:2025-05-23"
+    },
+    {
+      "id": "fc2-history-2025-05-24",
+      "date": "2025-05-24",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 後半:2025-05-24"
+    },
+    {
+      "id": "fc2-history-2025-05-25",
+      "date": "2025-05-25",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 後半:2025-05-25"
+    },
+    {
+      "id": "fc2-history-2025-05-26",
+      "date": "2025-05-26",
+      "status": "working",
+      "startTime": "12:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 後半:2025-05-26"
+    },
+    {
+      "id": "fc2-history-2025-05-28",
+      "date": "2025-05-28",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 後半:2025-05-28"
+    },
+    {
+      "id": "fc2-history-2025-05-29",
+      "date": "2025-05-29",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 後半:2025-05-29"
+    },
+    {
+      "id": "fc2-history-2025-05-30",
+      "date": "2025-05-30",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年5月 後半:2025-05-30"
+    },
+    {
+      "id": "fc2-history-2025-06-03",
+      "date": "2025-06-03",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 前半:2025-06-03"
+    },
+    {
+      "id": "fc2-history-2025-06-05",
+      "date": "2025-06-05",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 前半:2025-06-05"
+    },
+    {
+      "id": "fc2-history-2025-06-06",
+      "date": "2025-06-06",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 前半:2025-06-06"
+    },
+    {
+      "id": "fc2-history-2025-06-08",
+      "date": "2025-06-08",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 前半:2025-06-08"
+    },
+    {
+      "id": "fc2-history-2025-06-09",
+      "date": "2025-06-09",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 前半:2025-06-09"
+    },
+    {
+      "id": "fc2-history-2025-06-13",
+      "date": "2025-06-13",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 前半:2025-06-13"
+    },
+    {
+      "id": "fc2-history-2025-06-16",
+      "date": "2025-06-16",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 後半:2025-06-16"
+    },
+    {
+      "id": "fc2-history-2025-06-18",
+      "date": "2025-06-18",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 後半:2025-06-18"
+    },
+    {
+      "id": "fc2-history-2025-06-19",
+      "date": "2025-06-19",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 後半:2025-06-19"
+    },
+    {
+      "id": "fc2-history-2025-06-20",
+      "date": "2025-06-20",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 後半:2025-06-20"
+    },
+    {
+      "id": "fc2-history-2025-06-22",
+      "date": "2025-06-22",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 後半:2025-06-22"
+    },
+    {
+      "id": "fc2-history-2025-06-23",
+      "date": "2025-06-23",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 後半:2025-06-23"
+    },
+    {
+      "id": "fc2-history-2025-06-24",
+      "date": "2025-06-24",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 後半:2025-06-24"
+    },
+    {
+      "id": "fc2-history-2025-06-26",
+      "date": "2025-06-26",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 後半:2025-06-26"
+    },
+    {
+      "id": "fc2-history-2025-06-27",
+      "date": "2025-06-27",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 後半:2025-06-27"
+    },
+    {
+      "id": "fc2-history-2025-06-28",
+      "date": "2025-06-28",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 後半:2025-06-28"
+    },
+    {
+      "id": "fc2-history-2025-06-30",
+      "date": "2025-06-30",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年6月 後半:2025-06-30"
+    },
+    {
+      "id": "fc2-history-2025-07-01",
+      "date": "2025-07-01",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年7月 前半:2025-07-01"
+    },
+    {
+      "id": "fc2-history-2025-07-02",
+      "date": "2025-07-02",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年7月 前半:2025-07-02"
+    },
+    {
+      "id": "fc2-history-2025-07-04",
+      "date": "2025-07-04",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年7月 前半:2025-07-04"
+    },
+    {
+      "id": "fc2-history-2025-07-07",
+      "date": "2025-07-07",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年7月 前半:2025-07-07"
+    },
+    {
+      "id": "fc2-history-2025-07-08",
+      "date": "2025-07-08",
+      "status": "working",
+      "startTime": "18:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年7月 前半:2025-07-08"
+    },
+    {
+      "id": "fc2-history-2025-07-11",
+      "date": "2025-07-11",
+      "status": "working",
+      "startTime": "17:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年7月 前半:2025-07-11"
+    },
+    {
+      "id": "fc2-history-2025-07-12",
+      "date": "2025-07-12",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "13:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年7月 前半:2025-07-12"
+    },
+    {
+      "id": "fc2-history-2025-07-18",
+      "date": "2025-07-18",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年7月 後半:2025-07-18"
+    },
+    {
+      "id": "fc2-history-2025-07-21",
+      "date": "2025-07-21",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年7月 後半:2025-07-21"
+    },
+    {
+      "id": "fc2-history-2025-07-24",
+      "date": "2025-07-24",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年7月 後半:2025-07-24"
+    },
+    {
+      "id": "fc2-history-2025-07-25",
+      "date": "2025-07-25",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年7月 後半:2025-07-25"
+    },
+    {
+      "id": "fc2-history-2025-07-29",
+      "date": "2025-07-29",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年7月 後半:2025-07-29"
+    },
+    {
+      "id": "fc2-history-2025-07-30",
+      "date": "2025-07-30",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年7月 後半:2025-07-30"
+    },
+    {
+      "id": "fc2-history-2025-07-31",
+      "date": "2025-07-31",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年7月 後半:2025-07-31"
+    },
+    {
+      "id": "fc2-history-2025-08-01",
+      "date": "2025-08-01",
+      "status": "working",
+      "startTime": "18:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年8月 前半:2025-08-01"
+    },
+    {
+      "id": "fc2-history-2025-08-09",
+      "date": "2025-08-09",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年8月 前半:2025-08-09"
+    },
+    {
+      "id": "fc2-history-2025-08-11",
+      "date": "2025-08-11",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年8月 前半:2025-08-11"
+    },
+    {
+      "id": "fc2-history-2025-08-14",
+      "date": "2025-08-14",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年8月 前半:2025-08-14"
+    },
+    {
+      "id": "fc2-history-2025-08-15",
+      "date": "2025-08-15",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年8月 前半:2025-08-15"
+    },
+    {
+      "id": "fc2-history-2025-08-20",
+      "date": "2025-08-20",
+      "status": "working",
+      "startTime": "18:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年8月 後半:2025-08-20"
+    },
+    {
+      "id": "fc2-history-2025-08-22",
+      "date": "2025-08-22",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年8月 後半:2025-08-22"
+    },
+    {
+      "id": "fc2-history-2025-08-24",
+      "date": "2025-08-24",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年8月 後半:2025-08-24"
+    },
+    {
+      "id": "fc2-history-2025-08-26",
+      "date": "2025-08-26",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年8月 後半:2025-08-26"
+    },
+    {
+      "id": "fc2-history-2025-08-31",
+      "date": "2025-08-31",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年8月 後半:2025-08-31"
+    },
+    {
+      "id": "fc2-history-2025-09-01",
+      "date": "2025-09-01",
+      "status": "working",
+      "startTime": "18:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年9月 前半:2025-09-01"
+    },
+    {
+      "id": "fc2-history-2025-09-02",
+      "date": "2025-09-02",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年9月 前半:2025-09-02"
+    },
+    {
+      "id": "fc2-history-2025-09-04",
+      "date": "2025-09-04",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年9月 前半:2025-09-04"
+    },
+    {
+      "id": "fc2-history-2025-09-05",
+      "date": "2025-09-05",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年9月 前半:2025-09-05"
+    },
+    {
+      "id": "fc2-history-2025-09-06",
+      "date": "2025-09-06",
+      "status": "working",
+      "startTime": "12:00",
+      "endTime": "17:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年9月 前半:2025-09-06"
+    },
+    {
+      "id": "fc2-history-2025-09-08",
+      "date": "2025-09-08",
+      "status": "working",
+      "startTime": "18:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年9月 前半:2025-09-08"
+    },
+    {
+      "id": "fc2-history-2025-09-09",
+      "date": "2025-09-09",
+      "status": "working",
+      "startTime": "18:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年9月 前半:2025-09-09"
+    },
+    {
+      "id": "fc2-history-2025-09-25",
+      "date": "2025-09-25",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年9月 後半:2025-09-25"
+    },
+    {
+      "id": "fc2-history-2025-10-12",
+      "date": "2025-10-12",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年10月 前半:2025-10-12"
+    },
+    {
+      "id": "fc2-history-2025-10-14",
+      "date": "2025-10-14",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年10月 前半:2025-10-14"
+    },
+    {
+      "id": "fc2-history-2025-10-16",
+      "date": "2025-10-16",
+      "status": "working",
+      "startTime": "18:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年10月 後半:2025-10-16"
+    },
+    {
+      "id": "fc2-history-2025-11-05",
+      "date": "2025-11-05",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年11月 前半:2025-11-05"
+    },
+    {
+      "id": "fc2-history-2025-11-08",
+      "date": "2025-11-08",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年11月 前半:2025-11-08"
+    },
+    {
+      "id": "fc2-history-2025-11-14",
+      "date": "2025-11-14",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年11月 前半:2025-11-14"
+    },
+    {
+      "id": "fc2-history-2025-11-15",
+      "date": "2025-11-15",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年11月 前半:2025-11-15"
+    },
+    {
+      "id": "fc2-history-2025-11-20",
+      "date": "2025-11-20",
+      "status": "working",
+      "startTime": "18:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年11月 後半:2025-11-20"
+    },
+    {
+      "id": "fc2-history-2025-11-28",
+      "date": "2025-11-28",
+      "status": "working",
+      "startTime": "18:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年11月 後半:2025-11-28"
+    },
+    {
+      "id": "fc2-history-2025-11-29",
+      "date": "2025-11-29",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年11月 後半:2025-11-29"
+    },
+    {
+      "id": "fc2-history-2025-11-30",
+      "date": "2025-11-30",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年11月 後半:2025-11-30"
+    },
+    {
+      "id": "fc2-history-2025-12-04",
+      "date": "2025-12-04",
+      "status": "working",
+      "startTime": "10:30",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年12月 前半:2025-12-04"
+    },
+    {
+      "id": "fc2-history-2025-12-05",
+      "date": "2025-12-05",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年12月 前半:2025-12-05"
+    },
+    {
+      "id": "fc2-history-2025-12-08",
+      "date": "2025-12-08",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年12月 前半:2025-12-08"
+    },
+    {
+      "id": "fc2-history-2025-12-10",
+      "date": "2025-12-10",
+      "status": "working",
+      "startTime": "18:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年12月 前半:2025-12-10"
+    },
+    {
+      "id": "fc2-history-2025-12-16",
+      "date": "2025-12-16",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年12月 後半:2025-12-16"
+    },
+    {
+      "id": "fc2-history-2025-12-17",
+      "date": "2025-12-17",
+      "status": "working",
+      "startTime": "18:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年12月 後半:2025-12-17"
+    },
+    {
+      "id": "fc2-history-2025-12-19",
+      "date": "2025-12-19",
+      "status": "working",
+      "startTime": "18:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年12月 後半:2025-12-19"
+    },
+    {
+      "id": "fc2-history-2025-12-25",
+      "date": "2025-12-25",
+      "status": "working",
+      "startTime": "18:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年12月 後半:2025-12-25"
+    },
+    {
+      "id": "fc2-history-2025-12-28",
+      "date": "2025-12-28",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "13:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2025年12月 後半:2025-12-28"
+    },
+    {
+      "id": "fc2-history-2026-01-03",
+      "date": "2026-01-03",
+      "status": "working",
+      "startTime": "18:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2026年1月 前半:2026-01-03"
+    },
+    {
+      "id": "fc2-history-2026-01-07",
+      "date": "2026-01-07",
+      "status": "working",
+      "startTime": "18:00",
+      "endTime": "22:30",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2026年1月 前半:2026-01-07"
+    },
+    {
+      "id": "fc2-history-2026-01-16",
+      "date": "2026-01-16",
+      "status": "working",
+      "startTime": "12:00",
+      "endTime": "18:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2026年1月 後半:2026-01-16"
+    },
+    {
+      "id": "fc2-history-2026-01-17",
+      "date": "2026-01-17",
+      "status": "working",
+      "startTime": "14:00",
+      "endTime": "18:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2026年1月 後半:2026-01-17"
+    },
+    {
+      "id": "fc2-history-2026-01-26",
+      "date": "2026-01-26",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2026年1月 後半:2026-01-26"
+    },
+    {
+      "id": "fc2-history-2026-01-28",
+      "date": "2026-01-28",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
+      "source": "fc2-history",
+      "sourceId": "fc2-history:出勤表 履歴 2026年1月 後半:2026-01-28"
+    },
+    {
       "id": "fc2-history-2026-02-02",
       "date": "2026-02-02",
       "status": "working",
       "startTime": "13:00",
       "endTime": "18:00",
-      "updatedAt": "2026-03-28T07:18:39.199Z",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
       "source": "fc2-history",
       "sourceId": "fc2-history:出勤表 履歴 2026年2月 前半:2026-02-02"
     },
@@ -18,7 +1608,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "16:00",
-      "updatedAt": "2026-03-28T07:18:39.199Z",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
       "source": "fc2-history",
       "sourceId": "fc2-history:出勤表 履歴 2026年2月 前半:2026-02-14"
     },
@@ -28,7 +1618,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "15:00",
-      "updatedAt": "2026-03-28T07:18:39.199Z",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
       "source": "fc2-history",
       "sourceId": "fc2-history:出勤表 履歴 2026年2月 後半:2026-02-17"
     },
@@ -38,7 +1628,7 @@
       "status": "working",
       "startTime": "18:00",
       "endTime": "22:30",
-      "updatedAt": "2026-03-28T07:18:39.199Z",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
       "source": "fc2-history",
       "sourceId": "fc2-history:出勤表 履歴 2026年2月 後半:2026-02-19"
     },
@@ -48,7 +1638,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "15:00",
-      "updatedAt": "2026-03-28T07:18:39.199Z",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
       "source": "fc2-history",
       "sourceId": "fc2-history:出勤表 履歴 2026年2月 後半:2026-02-23"
     },
@@ -58,7 +1648,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "18:00",
-      "updatedAt": "2026-03-28T07:18:39.199Z",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
       "source": "fc2-history",
       "sourceId": "fc2-history:出勤表 履歴 2026年2月 後半:2026-02-27"
     },
@@ -68,7 +1658,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "15:00",
-      "updatedAt": "2026-03-28T07:18:39.199Z",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
       "source": "fc2-history",
       "sourceId": "fc2-history:出勤表 履歴 2026年3月 前半:2026-03-06"
     },
@@ -78,7 +1668,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "15:00",
-      "updatedAt": "2026-03-28T07:18:39.199Z",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
       "source": "fc2-history",
       "sourceId": "fc2-history:出勤表 履歴 2026年3月 前半:2026-03-09"
     },
@@ -88,7 +1678,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "18:00",
-      "updatedAt": "2026-03-28T07:18:39.199Z",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
       "source": "fc2-history",
       "sourceId": "fc2-history:出勤表 履歴 2026年3月 後半:2026-03-19"
     },
@@ -98,7 +1688,7 @@
       "status": "working",
       "startTime": "15:30",
       "endTime": "22:30",
-      "updatedAt": "2026-03-28T07:18:39.199Z",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
       "source": "fc2-history",
       "sourceId": "fc2-history:出勤表 履歴 2026年3月 後半:2026-03-23"
     },
@@ -108,7 +1698,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "20:00",
-      "updatedAt": "2026-03-28T07:18:39.199Z",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
       "source": "fc2-history",
       "sourceId": "fc2-history:出勤表 履歴 2026年3月 後半:2026-03-26"
     },
@@ -118,7 +1708,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "17:00",
-      "updatedAt": "2026-03-28T07:18:39.199Z",
+      "updatedAt": "2026-03-28T09:13:38.969Z",
       "source": "fc2-history",
       "sourceId": "fc2-history:出勤表 履歴 2026年3月 後半:2026-03-27"
     },
