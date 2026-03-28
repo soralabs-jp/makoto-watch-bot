@@ -230,3 +230,25 @@ npm run export:fc2-history -- data/fc2-history.html data/fc2-history-import.json
 ```
 
 この JSON を life-log-app 側の `importExternalSnapshot` へ流し込む想定です。
+
+### FC2 履歴 HTML を複数まとめて変換する
+
+FC2 の出勤履歴は月前半 / 後半などでページが分かれていても大丈夫です。`data/fc2-history/` のようなフォルダを作り、そこに HTML をまとめて置きます。
+
+例:
+- `data/fc2-history/2023-10-late.html`
+- `data/fc2-history/2023-11-early.html`
+- `data/fc2-history/2023-11-late.html`
+
+実行例:
+
+```bash
+npm run export:fc2-history -- data/fc2-history data/fc2-history-import.json 2026
+```
+
+引数:
+- 1つ目: 入力 HTML ファイル、または HTML をまとめたフォルダ
+- 2つ目: 出力 JSON パス
+- 3つ目: 年の補完用 fallback 値
+
+ファイル名に `2023` のような年が含まれていれば、その年を優先して日付を補完します。日付が重複した場合は、後から読んだ HTML の内容で上書きします。

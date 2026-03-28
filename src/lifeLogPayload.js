@@ -30,6 +30,14 @@ function buildShiftRecords(snapshot, source) {
     .map(([date, entry]) => toShiftRecord(date, entry, fetchedAt, source));
 }
 
+function mergeShiftRecords(...groups) {
+  const byDate = new Map();
+  groups.flat().forEach((record) => {
+    byDate.set(record.date, record);
+  });
+  return Array.from(byDate.values()).sort((left, right) => left.date.localeCompare(right.date));
+}
+
 function classifyProfileEvent(event) {
   if (event.kind === "basic_info_changed") {
     const field = String(event.field || "").toLowerCase();
@@ -149,7 +157,9 @@ function collectEvents(previousSnapshot, currentSnapshot, notify = {}) {
 function buildPayload(currentSnapshot, options = {}) {
   const source = options.source || "discord-bot";
   const previousSnapshot = options.previousSnapshot || null;
-  const shifts = buildShiftRecords(currentSnapshot, source);
+  const importedAt = currentSnapshot.fetchedAt || new Date().toISOString();
+  const latestShifts = buildShiftRecords(currentSnapshot, source);
+  const historyShifts = Array.isArray(options.historyShifts) ? options.historyShifts : [];
   const diffEvents = previousSnapshot
     ? collectEvents(previousSnapshot, currentSnapshot, options.notify)
     : [];
@@ -157,8 +167,8 @@ function buildPayload(currentSnapshot, options = {}) {
 
   return {
     source,
-    importedAt: currentSnapshot.fetchedAt || new Date().toISOString(),
-    shifts,
+    importedAt,
+    shifts: mergeShiftRecords(historyShifts, latestShifts),
     updates,
   };
 }
@@ -167,5 +177,6 @@ module.exports = {
   buildPayload,
   buildShiftRecords,
   collectEvents,
+  mergeShiftRecords,
   toExternalUpdateFromEvent,
 };

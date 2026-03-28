@@ -22,17 +22,27 @@ function main() {
   const previousPath = process.argv[5]
     ? path.resolve(process.argv[5])
     : path.join(rootDir, "data", "previous.json");
+  const historyPath = process.argv[6]
+    ? path.resolve(process.argv[6])
+    : path.join(rootDir, "data", "fc2-history-import.json");
 
   const currentSnapshot = readJson(latestPath);
   let previousSnapshot = null;
+  let historyShifts = [];
 
   if (fs.existsSync(previousPath)) {
     previousSnapshot = readJson(previousPath);
   }
 
+  if (fs.existsSync(historyPath)) {
+    const historyPayload = readJson(historyPath);
+    historyShifts = Array.isArray(historyPayload.shifts) ? historyPayload.shifts : [];
+  }
+
   const payload = buildPayload(currentSnapshot, {
     source,
     previousSnapshot,
+    historyShifts,
   });
 
   ensureDirForFile(outputPath);
