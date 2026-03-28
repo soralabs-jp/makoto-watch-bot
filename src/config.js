@@ -12,10 +12,11 @@ const config = {
     process.env.DIARY_URL ||
     "https://diary.m-surprise.com/category/no-75-%e3%81%be%e3%81%93%e3%81%a8/",
   discordWebhookUrl: process.env.DISCORD_WEBHOOK_URL || "",
-  discordUsername: process.env.DISCORD_USERNAME || "\u307e\u3053\u3068\u3061\u3083\u3093\u76e3\u8996BOT",
+  discordUsername: process.env.DISCORD_USERNAME || "\u307e\u3053\u3068\u3061\u3083\u3093\u901a\u77e5",
   discordAvatarUrl: process.env.DISCORD_AVATAR_URL || "",
   timezone: process.env.TIMEZONE || "Asia/Tokyo",
-  fetchTimeoutMs: Number(process.env.FETCH_TIMEOUT_MS || 45000),
+  fetchTimeoutMs: Number(process.env.FETCH_TIMEOUT_MS || 60000),
+  fetchRetryCount: Number(process.env.FETCH_RETRY_COUNT || 3),
   diaryPageLimit: Number(process.env.DIARY_PAGE_LIMIT || 3),
   notifyInitialSnapshot: parseBoolean(process.env.NOTIFY_INITIAL_SNAPSHOT, false),
   notify: {
