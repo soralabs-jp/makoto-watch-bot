@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-03-28T14:44:59.407Z",
+  "fetchedAt": "2026-03-28T15:05:11.860Z",
   "source": {
     "profileUrl": "https://m-surprise.com/profile/?id=4967",
     "diaryUrl": "https://diary.m-surprise.com/category/no-75-%e3%81%be%e3%81%93%e3%81%a8/"
@@ -37,9 +37,6 @@
     "https://m-surprise.com/admin/resize.php?pass=cast%2Fimg5_1220231017002.jpg"
   ],
   "schedule": {
-    "2026-03-28": {
-      "type": "off"
-    },
     "2026-03-29": {
       "type": "off"
     },
@@ -58,6 +55,9 @@
       "type": "off"
     },
     "2026-04-03": {
+      "type": "off"
+    },
+    "2026-04-04": {
       "type": "off"
     }
   },
