@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node src/main.js",
     "check": "node --check src/main.js",
-    "playwright:install": "playwright install chromium"
+    "playwright:install": "playwright install chromium",
+    "export:life-log": "node src/exportLifeLogPayload.js",
+    "export:fc2-history": "node src/exportFc2HistoryPayload.js"
   },
   "keywords": [],
   "author": "",

@@ -182,3 +182,51 @@ makoto-watch-bot/
   README.md
   .env.example
 ```
+
+## 習慣管理アプリ向け export
+
+この BOT は Discord 通知だけでなく、Expo / React Native 側の「習慣管理」アプリに流し込むための import payload も出力できます。
+
+### latest.json から payload を作る
+
+```bash
+npm run export:life-log
+```
+
+デフォルトでは `data/latest.json` を読み、`data/life-log-import.json` を出力します。
+
+引数を付ける場合:
+
+```bash
+node src/exportLifeLogPayload.js <input-json> <output-json> <source>
+```
+
+例:
+
+```bash
+node src/exportLifeLogPayload.js data/latest.json data/life-log-import.json discord-bot
+```
+
+### FC2 履歴 HTML から shiftRecords payload を作る
+
+```bash
+npm run export:fc2-history -- data/fc2-history.html data/fc2-history-import.json 2026
+```
+
+引数:
+- 1つ目: 入力 HTML パス
+- 2つ目: 出力 JSON パス
+- 3つ目: 年 (HTML が 03/21 のような月日だけの場合に補完)
+
+出力はどちらも次の形式です。
+
+```json
+{
+  "source": "discord-bot",
+  "importedAt": "2026-03-28T01:45:39.778Z",
+  "shifts": [],
+  "updates": []
+}
+```
+
+この JSON を life-log-app 側の `importExternalSnapshot` へ流し込む想定です。
