@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
+    inputs:
+      test_notification:
+        description: "Send a test notification only"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -37,16 +43,19 @@ jobs:
           PROFILE_URL: ${{ vars.PROFILE_URL || 'https://m-surprise.com/profile/?id=4967' }}
           DIARY_URL: ${{ vars.DIARY_URL || 'https://diary.m-surprise.com/category/no-75-%e3%81%be%e3%81%93%e3%81%a8/' }}
           TIMEZONE: Asia/Tokyo
-          FETCH_TIMEOUT_MS: 45000
+          FETCH_TIMEOUT_MS: 60000
+          FETCH_RETRY_COUNT: 3
           DIARY_PAGE_LIMIT: ${{ vars.DIARY_PAGE_LIMIT || '3' }}
           NOTIFY_INITIAL_SNAPSHOT: ${{ vars.NOTIFY_INITIAL_SNAPSHOT || 'false' }}
           NOTIFY_SCHEDULE: ${{ vars.NOTIFY_SCHEDULE || 'true' }}
           NOTIFY_PROFILE: ${{ vars.NOTIFY_PROFILE || 'true' }}
           NOTIFY_PHOTOS: ${{ vars.NOTIFY_PHOTOS || 'true' }}
           NOTIFY_DIARY: ${{ vars.NOTIFY_DIARY || 'true' }}
+          TEST_NOTIFICATION: ${{ github.event.inputs.test_notification || 'false' }}
         run: npm start
 
       - name: Commit updated snapshots
+        if: ${{ github.event.inputs.test_notification != 'true' }}
         run: |
           if ! git diff --quiet -- data/latest.json data/previous.json; then
             git config user.name "github-actions[bot]"

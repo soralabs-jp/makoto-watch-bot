@@ -19,6 +19,7 @@ const config = {
   fetchRetryCount: Number(process.env.FETCH_RETRY_COUNT || 3),
   diaryPageLimit: Number(process.env.DIARY_PAGE_LIMIT || 3),
   notifyInitialSnapshot: parseBoolean(process.env.NOTIFY_INITIAL_SNAPSHOT, false),
+  testNotification: parseBoolean(process.env.TEST_NOTIFICATION, false),
   notify: {
     schedule: parseBoolean(process.env.NOTIFY_SCHEDULE, true),
     profile: parseBoolean(process.env.NOTIFY_PROFILE, true),

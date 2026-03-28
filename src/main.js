@@ -9,6 +9,14 @@ const { notifyDiscord } = require("./notifyDiscord");
 const { readJson, writeJson } = require("./storage");
 
 async function main() {
+  if (config.testNotification) {
+    await notifyDiscord([
+      `\ud83e\uddea \u30c6\u30b9\u30c8\u901a\u77e5\u3067\u3059 ${config.profileUrl}`,
+    ]);
+    console.log("Test notification sent");
+    return;
+  }
+
   const previousLatest = await readJson(config.dataPaths.latest, null);
 
   try {
