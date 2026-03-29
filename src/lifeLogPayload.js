@@ -170,6 +170,21 @@ function buildPayload(currentSnapshot, options = {}) {
     importedAt,
     shifts: mergeShiftRecords(historyShifts, latestShifts),
     updates,
+    rankings: normalizeRankings(currentSnapshot.rankings),
+  };
+}
+
+function normalizeRankings(value) {
+  if (!value || typeof value !== "object") {
+    return {
+      currentRankingSummary: null,
+      rankingSnapshots: [],
+    };
+  }
+
+  return {
+    currentRankingSummary: value.currentRankingSummary || null,
+    rankingSnapshots: Array.isArray(value.rankingSnapshots) ? value.rankingSnapshots : [],
   };
 }
 

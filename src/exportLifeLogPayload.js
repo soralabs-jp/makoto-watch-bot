@@ -50,6 +50,7 @@ function main() {
 
   console.log(`Wrote life-log payload to ${outputPath}`);
   console.log(`shifts=${payload.shifts.length} updates=${payload.updates.length}`);
+  console.log(`rankingSnapshots=${payload.rankings?.rankingSnapshots?.length || 0}`);
 }
 
 if (require.main === module) {

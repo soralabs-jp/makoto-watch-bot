@@ -1,7 +1,8 @@
-{
-  "fetchedAt": "2026-03-29T04:08:57.818Z",
+﻿{
+  "fetchedAt": "2026-03-29T05:03:43.622Z",
   "source": {
     "profileUrl": "https://m-surprise.com/profile/?id=4967",
+    "rankingUrl": "https://m-surprise.com/ranking/",
     "diaryUrl": "https://diary.m-surprise.com/category/no-75-%e3%81%be%e3%81%93%e3%81%a8/"
   },
   "profile": {
@@ -167,5 +168,73 @@
       "image": "https://diary.m-surprise.com/wp-content/uploads/image0-1672-150x150.jpeg",
       "date": "2025-06-03"
     }
-  ]
+  ],
+  "rankings": {
+    "currentRankingSummary": {
+      "month": "2026-03",
+      "nominationRank": null,
+      "ratioRank": 4,
+      "detectedAt": "2026-03-29T05:03:43.593Z"
+    },
+    "rankingSnapshots": [
+      {
+        "month": "2026-03",
+        "detectedAt": "2026-03-29T05:03:43.593Z",
+        "nominationTop5": [
+          {
+            "rank": 1,
+            "castNo": 60,
+            "castName": "えみ"
+          },
+          {
+            "rank": 2,
+            "castNo": 67,
+            "castName": "あかね"
+          },
+          {
+            "rank": 3,
+            "castNo": 46,
+            "castName": "すず"
+          },
+          {
+            "rank": 4,
+            "castNo": 48,
+            "castName": "りの"
+          },
+          {
+            "rank": 5,
+            "castNo": 44,
+            "castName": "うた"
+          }
+        ],
+        "ratioTop5": [
+          {
+            "rank": 1,
+            "castNo": 60,
+            "castName": "えみ"
+          },
+          {
+            "rank": 2,
+            "castNo": 26,
+            "castName": "みひろ"
+          },
+          {
+            "rank": 3,
+            "castNo": 67,
+            "castName": "あかね"
+          },
+          {
+            "rank": 4,
+            "castNo": 75,
+            "castName": "まこと"
+          },
+          {
+            "rank": 5,
+            "castNo": 42,
+            "castName": "りこ"
+          }
+        ]
+      }
+    ]
+  }
 }

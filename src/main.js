@@ -5,42 +5,61 @@ const { diffProfile } = require("./diffProfile");
 const { diffSchedule } = require("./diffSchedule");
 const { fetchDiary } = require("./fetchDiary");
 const { fetchProfile } = require("./fetchProfile");
+const { fetchRanking } = require("./fetchRanking");
 const { notifyDiscord } = require("./notifyDiscord");
+const {
+  buildNextRankingState,
+  createRankingNotificationLines,
+  markRankingMonthNotified,
+  normalizeRankingState,
+  shouldNotifyRanking,
+} = require("./rankingState");
 const { readJson, writeJson } = require("./storage");
 
 async function main() {
   if (config.testNotification) {
     await notifyDiscord([
-      `\ud83e\uddea \u30c6\u30b9\u30c8\u901a\u77e5\u3067\u3059 ${config.profileUrl}`,
+      `🧪 テスト通知です ${config.profileUrl}`,
     ]);
     console.log("Test notification sent");
     return;
   }
 
   const previousLatest = await readJson(config.dataPaths.latest, null);
+  const previousRankingState = normalizeRankingState(await readJson(config.dataPaths.rankingState, null));
 
   try {
     const profileData = await fetchProfile();
     const diary = await fetchDiary();
+    const latestRanking = await fetchLatestRanking();
+    const nextRankingState = buildNextRankingState(previousRankingState, latestRanking);
 
     const currentSnapshot = {
       fetchedAt: new Date().toISOString(),
       source: {
         profileUrl: config.profileUrl,
+        rankingUrl: config.rankingUrl,
         diaryUrl: config.diaryUrl,
       },
       profile: profileData.profile,
       photos: profileData.photos,
       schedule: profileData.schedule,
       diary,
+      rankings: {
+        currentRankingSummary: nextRankingState.currentRankingSummary,
+        rankingSnapshots: nextRankingState.rankingSnapshots,
+      },
     };
 
     if (!hasSnapshot(previousLatest)) {
       await writeJson(config.dataPaths.previous, {});
       await writeJson(config.dataPaths.latest, currentSnapshot);
 
+      const updatedRankingState = await maybeNotifyRanking(previousRankingState, nextRankingState);
+      await writeJson(config.dataPaths.rankingState, updatedRankingState);
+
       if (config.notifyInitialSnapshot) {
-        await notifyDiscord(["\ud83c\udd95 \u521d\u671f\u30b9\u30ca\u30c3\u30d7\u30b7\u30e7\u30c3\u30c8\u4f5c\u6210\u5b8c\u4e86"]);
+        await notifyDiscord(["🆕 初期スナップショット作成完了"]);
       }
 
       console.log("Initial snapshot saved");
@@ -53,8 +72,11 @@ async function main() {
       await notifyDiscord(events.map((event) => formatEventMessage(event, currentSnapshot)));
     }
 
+    const updatedRankingState = await maybeNotifyRanking(previousRankingState, nextRankingState);
+
     await writeJson(config.dataPaths.previous, previousLatest);
     await writeJson(config.dataPaths.latest, currentSnapshot);
+    await writeJson(config.dataPaths.rankingState, updatedRankingState);
 
     console.log(`Completed. events=${events.length}`);
   } catch (error) {
@@ -62,8 +84,8 @@ async function main() {
 
     try {
       await notifyDiscord([
-        "\u26a0\ufe0f \u76e3\u8996BOT\u3067\u30a8\u30e9\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f",
-        `\u5185\u5bb9: ${error.message}`,
+        "⚠️ 監視BOTでエラーが発生しました",
+        `内容: ${error.message}`,
       ]);
     } catch (notifyError) {
       console.error("[main] failed to notify error", notifyError);
@@ -99,6 +121,28 @@ function collectEvents(previousSnapshot, currentSnapshot) {
 function formatEventMessage(event, snapshot) {
   const url = snapshot.source?.profileUrl || config.profileUrl;
   return url ? `${event.message} ${url}` : event.message;
+}
+
+async function fetchLatestRanking() {
+  try {
+    return await fetchRanking();
+  } catch (error) {
+    console.warn("[main] failed to fetch ranking", error);
+    return null;
+  }
+}
+
+async function maybeNotifyRanking(previousRankingState, nextRankingState) {
+  const summary = nextRankingState.currentRankingSummary;
+  if (!config.notify.ranking || !shouldNotifyRanking(previousRankingState, summary)) {
+    return nextRankingState;
+  }
+
+  await notifyDiscord(createRankingNotificationLines(summary), {
+    header: "まことちゃんランキング通知",
+  });
+
+  return markRankingMonthNotified(nextRankingState, summary.month);
 }
 
 main();

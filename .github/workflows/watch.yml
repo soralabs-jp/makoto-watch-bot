@@ -41,7 +41,9 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           DISCORD_USERNAME: まことちゃん通知
           PROFILE_URL: ${{ vars.PROFILE_URL || 'https://m-surprise.com/profile/?id=4967' }}
+          RANKING_URL: ${{ vars.RANKING_URL || 'https://m-surprise.com/ranking/' }}
           DIARY_URL: ${{ vars.DIARY_URL || 'https://diary.m-surprise.com/category/no-75-%e3%81%be%e3%81%93%e3%81%a8/' }}
+          RANKING_TARGET_CAST_NO: ${{ vars.RANKING_TARGET_CAST_NO || '75' }}
           TIMEZONE: Asia/Tokyo
           FETCH_TIMEOUT_MS: 60000
           FETCH_RETRY_COUNT: 3
@@ -51,6 +53,7 @@ jobs:
           NOTIFY_PROFILE: ${{ vars.NOTIFY_PROFILE || 'true' }}
           NOTIFY_PHOTOS: ${{ vars.NOTIFY_PHOTOS || 'true' }}
           NOTIFY_DIARY: ${{ vars.NOTIFY_DIARY || 'true' }}
+          NOTIFY_RANKING: ${{ vars.NOTIFY_RANKING || 'true' }}
           TEST_NOTIFICATION: ${{ github.event.inputs.test_notification || 'false' }}
         run: npm start
 
@@ -61,10 +64,10 @@ jobs:
       - name: Commit updated snapshots
         if: ${{ github.event.inputs.test_notification != 'true' }}
         run: |
-          if ! git diff --quiet -- data/latest.json data/previous.json data/life-log-import.json; then
+          if ! git diff --quiet -- data/latest.json data/previous.json data/ranking-state.json data/life-log-import.json; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/latest.json data/previous.json data/life-log-import.json
+            git add data/latest.json data/previous.json data/ranking-state.json data/life-log-import.json
             git commit -m "chore: update makoto snapshots"
             git push
           fi
