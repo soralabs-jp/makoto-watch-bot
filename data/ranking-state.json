@@ -1,9 +1,9 @@
 {
   "currentRankingSummary": {
-    "month": "2026-04",
+    "month": "2026-03",
     "nominationRank": null,
-    "ratioRank": null,
-    "detectedAt": "2026-03-31T17:46:05.973Z"
+    "ratioRank": 4,
+    "detectedAt": "2026-03-31T14:47:03.149Z"
   },
   "rankingSnapshots": [
     {
@@ -61,64 +61,6 @@
           "rank": 5,
           "castNo": 42,
           "castName": "りこ"
-        }
-      ]
-    },
-    {
-      "month": "2026-04",
-      "detectedAt": "2026-03-31T17:46:05.973Z",
-      "nominationTop5": [
-        {
-          "rank": 1,
-          "castNo": 60,
-          "castName": "えみ"
-        },
-        {
-          "rank": 2,
-          "castNo": 48,
-          "castName": "りの"
-        },
-        {
-          "rank": 3,
-          "castNo": 67,
-          "castName": "あかね"
-        },
-        {
-          "rank": 4,
-          "castNo": 46,
-          "castName": "すず"
-        },
-        {
-          "rank": 5,
-          "castNo": 42,
-          "castName": "りこ"
-        }
-      ],
-      "ratioTop5": [
-        {
-          "rank": 1,
-          "castNo": 48,
-          "castName": "りの"
-        },
-        {
-          "rank": 2,
-          "castNo": 60,
-          "castName": "えみ"
-        },
-        {
-          "rank": 3,
-          "castNo": 67,
-          "castName": "あかね"
-        },
-        {
-          "rank": 4,
-          "castNo": 51,
-          "castName": "いよ"
-        },
-        {
-          "rank": 5,
-          "castNo": 46,
-          "castName": "すず"
         }
       ]
     }
