@@ -48,17 +48,22 @@ function shouldNotifyRanking(currentState, rankingSummary) {
     return false;
   }
 
-  const inTop5 = isTopFive(rankingSummary.nominationRank) || isTopFive(rankingSummary.ratioRank);
+  const state = normalizeRankingState(currentState);
+  if (state.notifiedMonths.includes(rankingSummary.month)) {
+    return false;
+  }
 
-  return inTop5 && !normalizeRankingState(currentState).notifiedMonths.includes(rankingSummary.month);
+  return hasTopFiveRank(rankingSummary) || hasDropOutFromTopFive(state.currentRankingSummary, rankingSummary);
 }
 
-function createRankingNotificationLines(summary) {
+function createRankingNotificationLines(summary, previousSummary = null) {
+  const hasComparison = shouldShowComparison(previousSummary, summary);
+
   return [
     "🏆 月初ランキングを検知しました",
     `対象月: ${formatMonthLabel(summary.month)}`,
-    `指名数ランキング: ${formatRankLabel(summary.nominationRank)}`,
-    `指名比率ランキング: ${formatRankLabel(summary.ratioRank)}`,
+    `指名数ランキング: ${formatRankNotificationLabel(previousSummary?.nominationRank, summary.nominationRank, hasComparison)}`,
+    `指名比率ランキング: ${formatRankNotificationLabel(previousSummary?.ratioRank, summary.ratioRank, hasComparison)}`,
   ];
 }
 
@@ -156,6 +161,29 @@ function isTopFive(value) {
   return Number.isInteger(value) && value >= 1 && value <= 5;
 }
 
+function hasTopFiveRank(summary) {
+  return isTopFive(summary?.nominationRank) || isTopFive(summary?.ratioRank);
+}
+
+function hasDropOutFromTopFive(previousSummary, currentSummary) {
+  if (!shouldShowComparison(previousSummary, currentSummary)) {
+    return false;
+  }
+
+  return [
+    [previousSummary.nominationRank, currentSummary.nominationRank],
+    [previousSummary.ratioRank, currentSummary.ratioRank],
+  ].some(([previousRank, currentRank]) => isTopFive(previousRank) && !isTopFive(currentRank));
+}
+
+function shouldShowComparison(previousSummary, currentSummary) {
+  return Boolean(
+    previousSummary?.month &&
+    currentSummary?.month &&
+    previousSummary.month !== currentSummary.month,
+  );
+}
+
 function formatMonthLabel(month) {
   if (!/^\d{4}-\d{2}$/.test(month)) {
     return month || "-";
@@ -169,6 +197,20 @@ function formatRankLabel(rank) {
   return rank ? `${rank}位` : "圏外";
 }
 
+function formatRankNotificationLabel(previousRank, currentRank, hasComparison) {
+  if (!hasComparison) {
+    return formatRankLabel(currentRank);
+  }
+
+  const previousLabel = formatRankLabel(previousRank);
+  const currentLabel = formatRankLabel(currentRank);
+  if (previousLabel === currentLabel) {
+    return currentLabel;
+  }
+
+  return `${previousLabel} → ${currentLabel}`;
+}
+
 module.exports = {
   buildNextRankingState,
   createEmptyRankingState,
@@ -177,4 +219,3 @@ module.exports = {
   normalizeRankingState,
   shouldNotifyRanking,
 };
-

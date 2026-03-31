@@ -138,7 +138,7 @@ async function maybeNotifyRanking(previousRankingState, nextRankingState) {
     return nextRankingState;
   }
 
-  await notifyDiscord(createRankingNotificationLines(summary), {
+  await notifyDiscord(createRankingNotificationLines(summary, previousRankingState.currentRankingSummary), {
     header: "まことちゃんランキング通知",
   });
 
