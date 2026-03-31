@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-03-31T14:47:03.196Z",
+  "fetchedAt": "2026-03-31T15:53:43.893Z",
   "source": {
     "profileUrl": "https://m-surprise.com/profile/?id=4967",
     "rankingUrl": "https://m-surprise.com/ranking/",
@@ -38,9 +38,6 @@
     "https://m-surprise.com/admin/resize.php?pass=cast%2Fimg5_1220231017002.jpg"
   ],
   "schedule": {
-    "2026-03-31": {
-      "type": "off"
-    },
     "2026-04-01": {
       "type": "off"
     },
@@ -57,6 +54,9 @@
       "type": "off"
     },
     "2026-04-06": {
+      "type": "off"
+    },
+    "2026-04-07": {
       "type": "off"
     }
   },
@@ -169,15 +169,73 @@
   ],
   "rankings": {
     "currentRankingSummary": {
-      "month": "2026-03",
+      "month": "2026-04",
       "nominationRank": null,
       "ratioRank": 4,
-      "detectedAt": "2026-03-31T14:47:03.149Z"
+      "detectedAt": "2026-03-31T15:53:43.721Z"
     },
     "rankingSnapshots": [
       {
         "month": "2026-03",
         "detectedAt": "2026-03-31T14:47:03.149Z",
+        "nominationTop5": [
+          {
+            "rank": 1,
+            "castNo": 60,
+            "castName": "えみ"
+          },
+          {
+            "rank": 2,
+            "castNo": 67,
+            "castName": "あかね"
+          },
+          {
+            "rank": 3,
+            "castNo": 46,
+            "castName": "すず"
+          },
+          {
+            "rank": 4,
+            "castNo": 48,
+            "castName": "りの"
+          },
+          {
+            "rank": 5,
+            "castNo": 44,
+            "castName": "うた"
+          }
+        ],
+        "ratioTop5": [
+          {
+            "rank": 1,
+            "castNo": 60,
+            "castName": "えみ"
+          },
+          {
+            "rank": 2,
+            "castNo": 26,
+            "castName": "みひろ"
+          },
+          {
+            "rank": 3,
+            "castNo": 67,
+            "castName": "あかね"
+          },
+          {
+            "rank": 4,
+            "castNo": 75,
+            "castName": "まこと"
+          },
+          {
+            "rank": 5,
+            "castNo": 42,
+            "castName": "りこ"
+          }
+        ]
+      },
+      {
+        "month": "2026-04",
+        "detectedAt": "2026-03-31T15:53:43.721Z",
         "nominationTop5": [
           {
             "rank": 1,
