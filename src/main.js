@@ -31,7 +31,7 @@ async function main() {
   try {
     const profileData = await fetchProfile();
     const diary = await fetchDiary();
-    const latestRanking = await fetchLatestRanking();
+    const latestRanking = await fetchLatestRanking(previousRankingState);
     const nextRankingState = buildNextRankingState(previousRankingState, latestRanking);
 
     const currentSnapshot = {
@@ -123,9 +123,9 @@ function formatEventMessage(event, snapshot) {
   return url ? `${event.message} ${url}` : event.message;
 }
 
-async function fetchLatestRanking() {
+async function fetchLatestRanking(previousRankingState) {
   try {
-    return await fetchRanking();
+    return await fetchRanking(previousRankingState);
   } catch (error) {
     console.warn("[main] failed to fetch ranking", error);
     return null;

@@ -2,14 +2,21 @@
 const { fetchHtml } = require("./browser");
 const { config } = require("./config");
 
-async function fetchRanking() {
+async function fetchRanking(previousRankingState = null) {
   const html = await fetchHtml(config.rankingUrl);
   const detectedAt = new Date().toISOString();
-  const month = formatMonthKey(detectedAt, config.timezone);
   const $ = cheerio.load(html);
 
   const nominationTop5 = extractRankingEntries($, "指名数ランキング", ["指名比率ランキング"]);
   const ratioTop5 = extractRankingEntries($, "指名比率ランキング");
+  const month = resolveRankingMonth({
+    $,
+    html,
+    detectedAt,
+    nominationTop5,
+    ratioTop5,
+    previousRankingState,
+  });
 
   return {
     currentRankingSummary: {
@@ -89,11 +96,60 @@ function findRank(entries, castNo) {
   return matched ? matched.rank : null;
 }
 
+function resolveRankingMonth({ $, html, detectedAt, nominationTop5, ratioTop5, previousRankingState }) {
+  const detectedMonth = formatMonthKey(detectedAt, config.timezone);
+  const explicitMonth =
+    extractRankingMonthFromText($("title").text()) ||
+    extractRankingMonthFromText($("body").text()) ||
+    extractRankingMonthFromText(html);
+
+  if (explicitMonth) {
+    return explicitMonth;
+  }
+
+  const previousSummary = previousRankingState?.currentRankingSummary;
+  const previousSnapshot = findSnapshotByMonth(previousRankingState?.rankingSnapshots, previousSummary?.month);
+  if (
+    previousSummary?.month &&
+    isNextMonth(previousSummary.month, detectedMonth) &&
+    previousSnapshot &&
+    hasSameRankingEntries(previousSnapshot.nominationTop5, nominationTop5) &&
+    hasSameRankingEntries(previousSnapshot.ratioTop5, ratioTop5)
+  ) {
+    return previousSummary.month;
+  }
+
+  return detectedMonth;
+}
+
 function normalizeText(value) {
   return String(value || "")
     .replace(/\u00a0/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function extractRankingMonthFromText(value) {
+  const text = normalizeText(value);
+  if (!text) {
+    return null;
+  }
+
+  const patterns = [
+    /((?:20)\d{2})\s*[\/.-]\s*(\d{1,2})(?!\d)/gu,
+    /((?:20)\d{2})\s*\u5e74\s*(\d{1,2})\s*\u6708/gu,
+  ];
+
+  for (const pattern of patterns) {
+    for (const match of text.matchAll(pattern)) {
+      const month = toMonthKey(match[1], match[2]);
+      if (month) {
+        return month;
+      }
+    }
+  }
+
+  return null;
 }
 
 function formatMonthKey(value, timeZone) {
@@ -106,7 +162,49 @@ function formatMonthKey(value, timeZone) {
   return formatter.format(new Date(value));
 }
 
+function toMonthKey(yearValue, monthValue) {
+  const year = Number(yearValue);
+  const month = Number(monthValue);
+  if (!Number.isInteger(year) || !Number.isInteger(month) || month < 1 || month > 12) {
+    return null;
+  }
+
+  return `${year}-${String(month).padStart(2, "0")}`;
+}
+
+function findSnapshotByMonth(snapshots, month) {
+  if (!Array.isArray(snapshots) || !month) {
+    return null;
+  }
+
+  return snapshots.find((entry) => entry?.month === month) || null;
+}
+
+function hasSameRankingEntries(left, right) {
+  if (!Array.isArray(left) || !Array.isArray(right) || left.length !== right.length) {
+    return false;
+  }
+
+  return left.every((entry, index) => {
+    const other = right[index];
+    return entry?.rank === other?.rank && entry?.castNo === other?.castNo;
+  });
+}
+
+function isNextMonth(previousMonth, currentMonth) {
+  if (!/^\d{4}-\d{2}$/.test(previousMonth) || !/^\d{4}-\d{2}$/.test(currentMonth)) {
+    return false;
+  }
+
+  const [previousYear, previousMonthNumber] = previousMonth.split("-").map(Number);
+  const [currentYear, currentMonthNumber] = currentMonth.split("-").map(Number);
+  const previousValue = previousYear * 12 + (previousMonthNumber - 1);
+  const currentValue = currentYear * 12 + (currentMonthNumber - 1);
+  return currentValue === previousValue + 1;
+}
+
 module.exports = {
+  extractRankingMonthFromText,
   fetchRanking,
   formatMonthKey,
 };
