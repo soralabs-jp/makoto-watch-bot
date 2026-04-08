@@ -1,6 +1,6 @@
 {
   "source": "discord-bot",
-  "importedAt": "2026-04-08T22:40:05.626Z",
+  "importedAt": "2026-04-08T23:23:16.767Z",
   "shifts": [
     {
       "id": "fc2-history-2023-10-17",
@@ -1718,7 +1718,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "15:00",
-      "updatedAt": "2026-04-08T22:40:05.626Z",
+      "updatedAt": "2026-04-08T23:23:16.767Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-04-09"
     },
@@ -1728,7 +1728,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "18:00",
-      "updatedAt": "2026-04-08T22:40:05.626Z",
+      "updatedAt": "2026-04-08T23:23:16.767Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-04-10"
     },
@@ -1736,7 +1736,7 @@
       "id": "discord-bot-shift-2026-04-11",
       "date": "2026-04-11",
       "status": "off",
-      "updatedAt": "2026-04-08T22:40:05.626Z",
+      "updatedAt": "2026-04-08T23:23:16.767Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-04-11"
     },
@@ -1744,7 +1744,7 @@
       "id": "discord-bot-shift-2026-04-12",
       "date": "2026-04-12",
       "status": "off",
-      "updatedAt": "2026-04-08T22:40:05.626Z",
+      "updatedAt": "2026-04-08T23:23:16.767Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-04-12"
     },
@@ -1752,7 +1752,7 @@
       "id": "discord-bot-shift-2026-04-13",
       "date": "2026-04-13",
       "status": "off",
-      "updatedAt": "2026-04-08T22:40:05.626Z",
+      "updatedAt": "2026-04-08T23:23:16.767Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-04-13"
     },
@@ -1760,7 +1760,7 @@
       "id": "discord-bot-shift-2026-04-14",
       "date": "2026-04-14",
       "status": "off",
-      "updatedAt": "2026-04-08T22:40:05.626Z",
+      "updatedAt": "2026-04-08T23:23:16.767Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-04-14"
     },
@@ -1768,7 +1768,7 @@
       "id": "discord-bot-shift-2026-04-15",
       "date": "2026-04-15",
       "status": "off",
-      "updatedAt": "2026-04-08T22:40:05.626Z",
+      "updatedAt": "2026-04-08T23:23:16.767Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-04-15"
     }
@@ -1779,7 +1779,7 @@
       "month": "2026-04",
       "nominationRank": null,
       "ratioRank": null,
-      "detectedAt": "2026-04-08T22:40:05.591Z"
+      "detectedAt": "2026-04-08T23:23:16.745Z"
     },
     "rankingSnapshots": [
       {
@@ -1842,7 +1842,7 @@
       },
       {
         "month": "2026-04",
-        "detectedAt": "2026-04-08T22:40:05.591Z",
+        "detectedAt": "2026-04-08T23:23:16.745Z",
         "nominationTop5": [
           {
             "rank": 1,
