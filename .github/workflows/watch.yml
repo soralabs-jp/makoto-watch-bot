@@ -1,8 +1,6 @@
 ﻿name: Watch Makoto
 
 on:
-  schedule:
-    - cron: "*/5 * * * *"
   workflow_dispatch:
     inputs:
       test_notification:
@@ -10,6 +8,10 @@ on:
         required: false
         default: false
         type: boolean
+
+concurrency:
+  group: makoto-watch-bot
+  cancel-in-progress: false
 
 permissions:
   contents: write
