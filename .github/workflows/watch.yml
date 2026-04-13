@@ -74,7 +74,8 @@ jobs:
             git pull --rebase origin main || {
               git checkout --theirs -- data/latest.json data/previous.json data/ranking-state.json data/life-log-import.json
               git add data/latest.json data/previous.json data/ranking-state.json data/life-log-import.json
-              git rebase --continue
+              GIT_EDITOR=true git rebase --continue
             }
             git push
           fi
+
