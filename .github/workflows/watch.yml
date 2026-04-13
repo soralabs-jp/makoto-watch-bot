@@ -10,8 +10,8 @@ on:
         type: boolean
 
 concurrency:
-  group: makoto-watch-bot
-  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
 
 permissions:
   contents: write
