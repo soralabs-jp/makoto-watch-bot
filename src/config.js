@@ -18,6 +18,8 @@ const config = {
   discordAvatarUrl: process.env.DISCORD_AVATAR_URL || "",
   timezone: process.env.TIMEZONE || "Asia/Tokyo",
   fetchTimeoutMs: Number(process.env.FETCH_TIMEOUT_MS || 60000),
+  fetchRequestTimeoutMs: Number(process.env.FETCH_REQUEST_TIMEOUT_MS || 15000),
+  fetchBrowserTimeoutMs: Number(process.env.FETCH_BROWSER_TIMEOUT_MS || 20000),
   fetchRetryCount: Number(process.env.FETCH_RETRY_COUNT || 3),
   diaryPageLimit: Number(process.env.DIARY_PAGE_LIMIT || 3),
   notifyInitialSnapshot: parseBoolean(process.env.NOTIFY_INITIAL_SNAPSHOT, false),

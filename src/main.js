@@ -29,8 +29,25 @@ async function main() {
   const previousRankingState = normalizeRankingState(await readJson(config.dataPaths.rankingState, null));
 
   try {
-    const profileData = await fetchProfile();
-    const diary = await fetchDiary();
+    const profileData = await fetchWithSnapshotFallback({
+      label: "profile",
+      fetcher: fetchProfile,
+      fallbackValue:
+        previousLatest && previousLatest.profile && previousLatest.photos && previousLatest.schedule
+          ? {
+              sourceUrl: previousLatest.source?.profileUrl || config.profileUrl,
+              fetchedAt: previousLatest.fetchedAt,
+              profile: previousLatest.profile,
+              photos: previousLatest.photos,
+              schedule: previousLatest.schedule,
+            }
+          : null,
+    });
+    const diary = await fetchWithSnapshotFallback({
+      label: "diary",
+      fetcher: fetchDiary,
+      fallbackValue: previousLatest?.diary ?? null,
+    });
     const latestRanking = await fetchLatestRanking(previousRankingState);
     const nextRankingState = buildNextRankingState(previousRankingState, latestRanking);
 
@@ -146,3 +163,17 @@ async function maybeNotifyRanking(previousRankingState, nextRankingState) {
 }
 
 main();
+
+async function fetchWithSnapshotFallback({ label, fetcher, fallbackValue }) {
+  try {
+    return await fetcher();
+  } catch (error) {
+    if (fallbackValue != null) {
+      console.warn(`[main] failed to fetch ${label}; reusing previous snapshot`, error);
+      return fallbackValue;
+    }
+
+    error.message = `failed to fetch ${label}: ${error.message}`;
+    throw error;
+  }
+}
