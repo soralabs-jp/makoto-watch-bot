@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-04-16T15:31:23.878Z",
+  "fetchedAt": "2026-04-16T15:36:18.197Z",
   "source": {
     "profileUrl": "https://m-surprise.com/profile/?id=4967",
     "rankingUrl": "https://m-surprise.com/ranking/",
@@ -174,7 +174,7 @@
       "month": "2026-04",
       "nominationRank": null,
       "ratioRank": null,
-      "detectedAt": "2026-04-16T15:31:23.841Z"
+      "detectedAt": "2026-04-16T15:36:18.084Z"
     },
     "rankingSnapshots": [
       {
@@ -237,7 +237,7 @@
       },
       {
         "month": "2026-04",
-        "detectedAt": "2026-04-16T15:31:23.841Z",
+        "detectedAt": "2026-04-16T15:36:18.084Z",
         "nominationTop5": [
           {
             "rank": 1,
