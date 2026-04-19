@@ -3,7 +3,7 @@
     "month": "2026-04",
     "nominationRank": null,
     "ratioRank": null,
-    "detectedAt": "2026-04-19T20:31:57.463Z"
+    "detectedAt": "2026-04-19T20:36:07.185Z"
   },
   "rankingSnapshots": [
     {
@@ -66,7 +66,7 @@
     },
     {
       "month": "2026-04",
-      "detectedAt": "2026-04-19T20:31:57.463Z",
+      "detectedAt": "2026-04-19T20:36:07.185Z",
       "nominationTop5": [
         {
           "rank": 1,
