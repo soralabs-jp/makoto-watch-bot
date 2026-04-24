@@ -1,6 +1,6 @@
 {
   "source": "discord-bot",
-  "importedAt": "2026-04-24T09:36:13.995Z",
+  "importedAt": "2026-04-24T09:41:22.380Z",
   "shifts": [
     {
       "id": "fc2-history-2023-10-17",
@@ -1718,7 +1718,7 @@
       "status": "working",
       "startTime": "15:30",
       "endTime": "22:30",
-      "updatedAt": "2026-04-24T09:36:13.995Z",
+      "updatedAt": "2026-04-24T09:41:22.380Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-04-24"
     },
@@ -1726,7 +1726,7 @@
       "id": "discord-bot-shift-2026-04-25",
       "date": "2026-04-25",
       "status": "off",
-      "updatedAt": "2026-04-24T09:36:13.995Z",
+      "updatedAt": "2026-04-24T09:41:22.380Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-04-25"
     },
@@ -1736,7 +1736,7 @@
       "status": "working",
       "startTime": "12:00",
       "endTime": "15:00",
-      "updatedAt": "2026-04-24T09:36:13.995Z",
+      "updatedAt": "2026-04-24T09:41:22.380Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-04-26"
     },
@@ -1744,7 +1744,7 @@
       "id": "discord-bot-shift-2026-04-27",
       "date": "2026-04-27",
       "status": "off",
-      "updatedAt": "2026-04-24T09:36:13.995Z",
+      "updatedAt": "2026-04-24T09:41:22.380Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-04-27"
     },
@@ -1752,7 +1752,7 @@
       "id": "discord-bot-shift-2026-04-28",
       "date": "2026-04-28",
       "status": "off",
-      "updatedAt": "2026-04-24T09:36:13.995Z",
+      "updatedAt": "2026-04-24T09:41:22.380Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-04-28"
     },
@@ -1760,7 +1760,7 @@
       "id": "discord-bot-shift-2026-04-29",
       "date": "2026-04-29",
       "status": "off",
-      "updatedAt": "2026-04-24T09:36:13.995Z",
+      "updatedAt": "2026-04-24T09:41:22.380Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-04-29"
     },
@@ -1768,33 +1768,38 @@
       "id": "discord-bot-shift-2026-04-30",
       "date": "2026-04-30",
       "status": "off",
-      "updatedAt": "2026-04-24T09:36:13.995Z",
+      "updatedAt": "2026-04-24T09:41:22.380Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-04-30"
     }
   ],
   "updates": [
     {
-      "id": "discord-bot-schedule-time_changed-2026-04-26-entry",
-      "date": "2026-04-26",
-      "detectedAt": "2026-04-24T09:36:13.995Z",
-      "type": "shift_update",
-      "title": "🔄 時間変更: 4/26 10:00-15:00 -> 12:00-15:00",
+      "id": "discord-bot-profile-basic_info_changed-2026-04-24-size",
+      "date": "2026-04-24",
+      "detectedAt": "2026-04-24T09:41:22.380Z",
+      "type": "size_update",
+      "title": "📝 プロフィール更新: size が「B:91(F) W:56 H:86」->「B:91(F) W:55 H:86」に変わりました",
       "source": "discord-bot",
       "sourceUrl": "https://m-surprise.com/profile/?id=4967",
       "metadata": {
-        "category": "schedule",
-        "kind": "time_changed",
-        "before": {
-          "type": "work",
-          "start": "10:00",
-          "end": "15:00"
-        },
-        "after": {
-          "type": "work",
-          "start": "12:00",
-          "end": "15:00"
-        }
+        "category": "profile",
+        "kind": "basic_info_changed",
+        "field": "size"
+      }
+    },
+    {
+      "id": "discord-bot-profile-basic_info_changed-2026-04-24-waist",
+      "date": "2026-04-24",
+      "detectedAt": "2026-04-24T09:41:22.380Z",
+      "type": "size_update",
+      "title": "📝 プロフィール更新: waist が「56」->「55」に変わりました",
+      "source": "discord-bot",
+      "sourceUrl": "https://m-surprise.com/profile/?id=4967",
+      "metadata": {
+        "category": "profile",
+        "kind": "basic_info_changed",
+        "field": "waist"
       }
     }
   ],
@@ -1803,7 +1808,7 @@
       "month": "2026-04",
       "nominationRank": null,
       "ratioRank": null,
-      "detectedAt": "2026-04-24T09:36:13.770Z"
+      "detectedAt": "2026-04-24T09:41:22.246Z"
     },
     "rankingSnapshots": [
       {
@@ -1866,7 +1871,7 @@
       },
       {
         "month": "2026-04",
-        "detectedAt": "2026-04-24T09:36:13.770Z",
+        "detectedAt": "2026-04-24T09:41:22.246Z",
         "nominationTop5": [
           {
             "rank": 1,
