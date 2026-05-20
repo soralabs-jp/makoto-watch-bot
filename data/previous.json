@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-05-20T14:58:22.450Z",
+  "fetchedAt": "2026-05-20T15:01:10.360Z",
   "source": {
     "profileUrl": "https://m-surprise.com/profile/?id=4967",
     "rankingUrl": "https://m-surprise.com/ranking/",
@@ -38,9 +38,6 @@
     "https://m-surprise.com/admin/resize.php?pass=cast%2Fimg5_1220231017002.jpg"
   ],
   "schedule": {
-    "2026-05-20": {
-      "type": "off"
-    },
     "2026-05-21": {
       "type": "off"
     },
@@ -57,6 +54,9 @@
       "type": "off"
     },
     "2026-05-26": {
+      "type": "off"
+    },
+    "2026-05-27": {
       "type": "off"
     }
   },
@@ -172,7 +172,7 @@
       "month": "2026-05",
       "nominationRank": null,
       "ratioRank": 5,
-      "detectedAt": "2026-05-20T14:58:22.416Z"
+      "detectedAt": "2026-05-20T15:01:10.060Z"
     },
     "rankingSnapshots": [
       {
@@ -293,7 +293,7 @@
       },
       {
         "month": "2026-05",
-        "detectedAt": "2026-05-20T14:58:22.416Z",
+        "detectedAt": "2026-05-20T15:01:10.060Z",
         "nominationTop5": [
           {
             "rank": 1,
