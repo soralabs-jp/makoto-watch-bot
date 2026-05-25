@@ -8,6 +8,7 @@ async function fetchHtml(url) {
   for (let attempt = 1; attempt <= config.fetchRetryCount; attempt += 1) {
     const context = await request.newContext({
       userAgent: config.userAgent,
+      ignoreHTTPSErrors: true,
       extraHTTPHeaders: {
         "accept-language": "ja-JP,ja;q=0.9,en-US;q=0.8,en;q=0.7",
       },
@@ -51,12 +52,14 @@ async function fetchHtmlWithBrowser(url) {
   const browserTimeoutMs = resolveTimeout(config.fetchBrowserTimeoutMs, config.fetchTimeoutMs);
   const browser = await chromium.launch({
     headless: true,
+    args: ["--disable-http2"],
   });
 
   try {
     const context = await browser.newContext({
       userAgent: config.userAgent,
       locale: "ja-JP",
+      ignoreHTTPSErrors: true,
       extraHTTPHeaders: {
         "accept-language": "ja-JP,ja;q=0.9,en-US;q=0.8,en;q=0.7",
       },

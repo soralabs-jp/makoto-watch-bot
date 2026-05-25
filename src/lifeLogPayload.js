@@ -50,7 +50,7 @@ function classifyProfileEvent(event) {
 }
 
 function classifyScheduleEvent(event) {
-  if (["off_added", "work_to_off", "work_cancelled"].includes(event.kind)) {
+  if (["off_added", "work_to_off", "pending_to_off", "work_cancelled"].includes(event.kind)) {
     return "day_off";
   }
 

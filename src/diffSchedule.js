@@ -44,6 +44,16 @@ function diffSchedule(previous = {}, current = {}) {
       continue;
     }
 
+    if (before.type === "pending" && after.type === "off") {
+      events.push(createEvent("pending_to_off", date, before, after));
+      continue;
+    }
+
+    if (before.type === "pending" && after.type === "work") {
+      events.push(createEvent("pending_to_work", date, before, after));
+      continue;
+    }
+
     if (before.type === "work" && after.type === "work") {
       events.push(createEvent("time_changed", date, before, after));
       continue;
@@ -94,6 +104,10 @@ function formatScheduleMessage(kind, date, before, after) {
       return `\ud83d\udd04 \u5909\u66f4: ${shortDate} \u304a\u4f11\u307f -> ${formatScheduleEntry(after)}`;
     case "work_to_off":
       return `\u274c \u51fa\u52e4\u30ad\u30e3\u30f3\u30bb\u30eb: ${shortDate} ${formatScheduleEntry(before)} -> \u304a\u4f11\u307f`;
+    case "pending_to_off":
+      return `\ud83d\udd04 \u5909\u66f4: ${shortDate} \u8981\u78ba\u8a8d -> \u304a\u4f11\u307f`;
+    case "pending_to_work":
+      return `\ud83d\udd04 \u5909\u66f4: ${shortDate} \u8981\u78ba\u8a8d -> ${formatScheduleEntry(after)}`;
     case "time_changed":
       return `\ud83d\udd04 \u6642\u9593\u5909\u66f4: ${shortDate} ${formatScheduleEntry(before)} -> ${formatScheduleEntry(after)}`;
     case "work_cancelled":
