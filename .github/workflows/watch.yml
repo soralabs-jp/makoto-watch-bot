@@ -1,4 +1,4 @@
-﻿name: Watch Makoto
+name: Watch Makoto
 
 on:
   workflow_dispatch:
