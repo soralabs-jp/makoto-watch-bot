@@ -75,14 +75,28 @@ jobs:
             git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
             git add data/latest.json data/previous.json data/ranking-state.json data/life-log-import.json
             git commit -m "chore: update makoto snapshots"
-            if ! git pull --rebase origin main; then
+            resolve_snapshot_rebase() {
               if [ ! -d .git/rebase-merge ] && [ ! -d .git/rebase-apply ]; then
-                exit 1
+                return 1
               fi
               git checkout --theirs -- data/latest.json data/previous.json data/ranking-state.json data/life-log-import.json
               git add data/latest.json data/previous.json data/ranking-state.json data/life-log-import.json
               GIT_EDITOR=true git rebase --continue
+            }
+            if ! git pull --rebase origin main; then
+              resolve_snapshot_rebase
             fi
-            git push
+            for attempt in 1 2 3; do
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                exit 1
+              fi
+              sleep 5
+              if ! git pull --rebase origin main; then
+                resolve_snapshot_rebase
+              fi
+            done
           fi
 
