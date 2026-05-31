@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-05-31T14:51:06.401Z",
+  "fetchedAt": "2026-05-31T14:56:07.315Z",
   "source": {
     "profileUrl": "https://m-surprise.com/profile/?id=4967",
     "rankingUrl": "https://m-surprise.com/ranking/",
@@ -171,8 +171,8 @@
     "currentRankingSummary": {
       "month": "2026-05",
       "nominationRank": null,
-      "ratioRank": 5,
-      "detectedAt": "2026-05-31T14:51:06.366Z"
+      "ratioRank": null,
+      "detectedAt": "2026-05-31T14:56:07.280Z"
     },
     "rankingSnapshots": [
       {
@@ -293,32 +293,32 @@
       },
       {
         "month": "2026-05",
-        "detectedAt": "2026-05-31T14:51:06.366Z",
+        "detectedAt": "2026-05-31T14:56:07.280Z",
         "nominationTop5": [
           {
             "rank": 1,
-            "castNo": 60,
-            "castName": "えみ"
+            "castNo": 17,
+            "castName": "りり"
           },
           {
             "rank": 2,
-            "castNo": 42,
-            "castName": "りこ"
+            "castNo": 67,
+            "castName": "あかね"
           },
           {
             "rank": 3,
-            "castNo": 20,
-            "castName": "まふゆ"
-          },
-          {
-            "rank": 4,
             "castNo": 48,
             "castName": "りの"
           },
           {
+            "rank": 4,
+            "castNo": 60,
+            "castName": "えみ"
+          },
+          {
             "rank": 5,
-            "castNo": 17,
-            "castName": "りり"
+            "castNo": 20,
+            "castName": "まふゆ"
           }
         ],
         "ratioTop5": [
@@ -334,18 +334,18 @@
           },
           {
             "rank": 3,
-            "castNo": 70,
-            "castName": "なる"
-          },
-          {
-            "rank": 4,
             "castNo": 20,
             "castName": "まふゆ"
           },
           {
+            "rank": 4,
+            "castNo": 60,
+            "castName": "えみ"
+          },
+          {
             "rank": 5,
-            "castNo": 75,
-            "castName": "まこと"
+            "castNo": 26,
+            "castName": "みひろ"
           }
         ]
       }
