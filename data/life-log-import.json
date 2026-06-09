@@ -1713,6 +1713,14 @@
       "sourceId": "fc2-history:出勤表 履歴 2026年3月 後半:2026-03-27"
     },
     {
+      "id": "discord-bot-shift-2026-06-05",
+      "date": "2026-06-05",
+      "status": "off",
+      "updatedAt": "2026-06-05T00:00:00+09:00",
+      "source": "discord-bot",
+      "sourceId": "schedule:2026-06-05"
+    },
+    {
       "id": "discord-bot-shift-2026-06-09",
       "date": "2026-06-09",
       "status": "working",
@@ -1773,7 +1781,22 @@
       "sourceId": "schedule:2026-06-15"
     }
   ],
-  "updates": [],
+  "updates": [
+    {
+      "id": "discord-bot-schedule-off-added-2026-06-05-correction",
+      "date": "2026-06-05",
+      "detectedAt": "2026-06-05T00:00:00+09:00",
+      "type": "day_off",
+      "title": "💤 お休み追加: 6/5(金)",
+      "source": "discord-bot",
+      "sourceUrl": "https://m-surprise.com/profile/?id=4967",
+      "metadata": {
+        "category": "schedule",
+        "kind": "off_added",
+        "corrected": true
+      }
+    }
+  ],
   "rankings": {
     "currentRankingSummary": {
       "month": "2026-05",

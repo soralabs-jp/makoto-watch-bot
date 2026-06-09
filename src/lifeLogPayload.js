@@ -3,6 +3,14 @@ const { diffPhotos } = require("./diffPhotos");
 const { diffProfile } = require("./diffProfile");
 const { diffSchedule } = require("./diffSchedule");
 
+const knownScheduleCorrections = [
+  {
+    date: "2026-06-05",
+    detectedAt: "2026-06-05T00:00:00+09:00",
+    title: "\uD83D\uDCA4 \u304A\u4F11\u307F\u8FFD\u52A0: 6/5(\u91D1)",
+  },
+];
+
 function toShiftRecord(date, entry, fetchedAt, source) {
   const status =
     entry && entry.type === "work"
@@ -36,6 +44,45 @@ function mergeShiftRecords(...groups) {
     byDate.set(record.date, record);
   });
   return Array.from(byDate.values()).sort((left, right) => left.date.localeCompare(right.date));
+}
+
+function buildKnownCorrectionShifts(source) {
+  return knownScheduleCorrections.map((correction) => ({
+    id: `${source}-shift-${correction.date}`,
+    date: correction.date,
+    status: "off",
+    updatedAt: correction.detectedAt,
+    source,
+    sourceId: `schedule:${correction.date}`,
+  }));
+}
+
+function buildKnownCorrectionUpdates(source, profileUrl) {
+  return knownScheduleCorrections.map((correction) => ({
+    id: `${source}-schedule-off-added-${correction.date}-correction`,
+    date: correction.date,
+    detectedAt: correction.detectedAt,
+    type: "day_off",
+    title: correction.title,
+    source,
+    sourceUrl: profileUrl,
+    metadata: {
+      category: "schedule",
+      kind: "off_added",
+      corrected: true,
+    },
+  }));
+}
+
+function mergeUpdates(...groups) {
+  const byId = new Map();
+  groups.flat().forEach((update) => {
+    byId.set(update.id, update);
+  });
+  return Array.from(byId.values()).sort((left, right) => {
+    const dateOrder = left.date.localeCompare(right.date);
+    return dateOrder === 0 ? left.id.localeCompare(right.id) : dateOrder;
+  });
 }
 
 function classifyProfileEvent(event) {
@@ -159,17 +206,19 @@ function buildPayload(currentSnapshot, options = {}) {
   const previousSnapshot = options.previousSnapshot || null;
   const importedAt = currentSnapshot.fetchedAt || new Date().toISOString();
   const latestShifts = buildShiftRecords(currentSnapshot, source);
+  const correctionShifts = buildKnownCorrectionShifts(source);
   const historyShifts = Array.isArray(options.historyShifts) ? options.historyShifts : [];
   const diffEvents = previousSnapshot
     ? collectEvents(previousSnapshot, currentSnapshot, options.notify)
     : [];
-  const updates = diffEvents.map((event) => toExternalUpdateFromEvent(event, currentSnapshot, source));
+  const diffUpdates = diffEvents.map((event) => toExternalUpdateFromEvent(event, currentSnapshot, source));
+  const correctionUpdates = buildKnownCorrectionUpdates(source, currentSnapshot.source?.profileUrl);
 
   return {
     source,
     importedAt,
-    shifts: mergeShiftRecords(historyShifts, latestShifts),
-    updates,
+    shifts: mergeShiftRecords(historyShifts, correctionShifts, latestShifts),
+    updates: mergeUpdates(correctionUpdates, diffUpdates),
     rankings: normalizeRankings(currentSnapshot.rankings),
   };
 }
