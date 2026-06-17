@@ -1,6 +1,6 @@
 {
   "source": "discord-bot",
-  "importedAt": "2026-06-17T15:01:27.387Z",
+  "importedAt": "2026-06-17T15:06:33.614Z",
   "shifts": [
     {
       "id": "fc2-history-2023-10-17",
@@ -1724,7 +1724,7 @@
       "id": "discord-bot-shift-2026-06-18",
       "date": "2026-06-18",
       "status": "off",
-      "updatedAt": "2026-06-17T15:01:27.387Z",
+      "updatedAt": "2026-06-17T15:06:33.614Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-06-18"
     },
@@ -1732,7 +1732,7 @@
       "id": "discord-bot-shift-2026-06-19",
       "date": "2026-06-19",
       "status": "off",
-      "updatedAt": "2026-06-17T15:01:27.387Z",
+      "updatedAt": "2026-06-17T15:06:33.614Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-06-19"
     },
@@ -1740,7 +1740,7 @@
       "id": "discord-bot-shift-2026-06-20",
       "date": "2026-06-20",
       "status": "off",
-      "updatedAt": "2026-06-17T15:01:27.387Z",
+      "updatedAt": "2026-06-17T15:06:33.614Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-06-20"
     },
@@ -1748,7 +1748,7 @@
       "id": "discord-bot-shift-2026-06-21",
       "date": "2026-06-21",
       "status": "off",
-      "updatedAt": "2026-06-17T15:01:27.387Z",
+      "updatedAt": "2026-06-17T15:06:33.614Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-06-21"
     },
@@ -1756,7 +1756,7 @@
       "id": "discord-bot-shift-2026-06-22",
       "date": "2026-06-22",
       "status": "off",
-      "updatedAt": "2026-06-17T15:01:27.387Z",
+      "updatedAt": "2026-06-17T15:06:33.614Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-06-22"
     },
@@ -1764,7 +1764,7 @@
       "id": "discord-bot-shift-2026-06-23",
       "date": "2026-06-23",
       "status": "off",
-      "updatedAt": "2026-06-17T15:01:27.387Z",
+      "updatedAt": "2026-06-17T15:06:33.614Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-06-23"
     },
@@ -1772,7 +1772,7 @@
       "id": "discord-bot-shift-2026-06-24",
       "date": "2026-06-24",
       "status": "off",
-      "updatedAt": "2026-06-17T15:01:27.387Z",
+      "updatedAt": "2026-06-17T15:06:33.614Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-06-24"
     }
@@ -1791,22 +1791,6 @@
         "kind": "off_added",
         "corrected": true
       }
-    },
-    {
-      "id": "discord-bot-schedule-off_added-2026-06-24-entry",
-      "date": "2026-06-24",
-      "detectedAt": "2026-06-17T15:01:27.387Z",
-      "type": "day_off",
-      "title": "💤 お休み追加: 6/24",
-      "source": "discord-bot",
-      "sourceUrl": "https://m-surprise.com/profile/?id=4967",
-      "metadata": {
-        "category": "schedule",
-        "kind": "off_added",
-        "after": {
-          "type": "off"
-        }
-      }
     }
   ],
   "rankings": {
@@ -1814,7 +1798,7 @@
       "month": "2026-05",
       "nominationRank": null,
       "ratioRank": null,
-      "detectedAt": "2026-06-17T15:01:27.332Z"
+      "detectedAt": "2026-06-17T15:06:33.580Z"
     },
     "rankingSnapshots": [
       {
@@ -1935,7 +1919,7 @@
       },
       {
         "month": "2026-05",
-        "detectedAt": "2026-06-17T15:01:27.332Z",
+        "detectedAt": "2026-06-17T15:06:33.580Z",
         "nominationTop5": [
           {
             "rank": 1,
