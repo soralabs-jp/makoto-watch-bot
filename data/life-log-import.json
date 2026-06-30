@@ -1,6 +1,6 @@
 {
   "source": "discord-bot",
-  "importedAt": "2026-06-30T14:37:31.788Z",
+  "importedAt": "2026-06-30T21:17:31.945Z",
   "shifts": [
     {
       "id": "fc2-history-2023-10-17",
@@ -1721,20 +1721,10 @@
       "sourceId": "schedule:2026-06-05"
     },
     {
-      "id": "discord-bot-shift-2026-06-30",
-      "date": "2026-06-30",
-      "status": "working",
-      "startTime": "10:00",
-      "endTime": "16:00",
-      "updatedAt": "2026-06-30T14:37:31.788Z",
-      "source": "discord-bot",
-      "sourceId": "schedule:2026-06-30"
-    },
-    {
       "id": "discord-bot-shift-2026-07-01",
       "date": "2026-07-01",
       "status": "off",
-      "updatedAt": "2026-06-30T14:37:31.788Z",
+      "updatedAt": "2026-06-30T21:17:31.945Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-07-01"
     },
@@ -1742,7 +1732,7 @@
       "id": "discord-bot-shift-2026-07-02",
       "date": "2026-07-02",
       "status": "off",
-      "updatedAt": "2026-06-30T14:37:31.788Z",
+      "updatedAt": "2026-06-30T21:17:31.945Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-07-02"
     },
@@ -1750,7 +1740,7 @@
       "id": "discord-bot-shift-2026-07-03",
       "date": "2026-07-03",
       "status": "off",
-      "updatedAt": "2026-06-30T14:37:31.788Z",
+      "updatedAt": "2026-06-30T21:17:31.945Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-07-03"
     },
@@ -1758,7 +1748,7 @@
       "id": "discord-bot-shift-2026-07-04",
       "date": "2026-07-04",
       "status": "off",
-      "updatedAt": "2026-06-30T14:37:31.788Z",
+      "updatedAt": "2026-06-30T21:17:31.945Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-07-04"
     },
@@ -1766,7 +1756,7 @@
       "id": "discord-bot-shift-2026-07-05",
       "date": "2026-07-05",
       "status": "off",
-      "updatedAt": "2026-06-30T14:37:31.788Z",
+      "updatedAt": "2026-06-30T21:17:31.945Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-07-05"
     },
@@ -1774,9 +1764,17 @@
       "id": "discord-bot-shift-2026-07-06",
       "date": "2026-07-06",
       "status": "off",
-      "updatedAt": "2026-06-30T14:37:31.788Z",
+      "updatedAt": "2026-06-30T21:17:31.945Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-07-06"
+    },
+    {
+      "id": "discord-bot-shift-2026-07-07",
+      "date": "2026-07-07",
+      "status": "off",
+      "updatedAt": "2026-06-30T21:17:31.945Z",
+      "source": "discord-bot",
+      "sourceId": "schedule:2026-07-07"
     }
   ],
   "updates": [
@@ -1793,14 +1791,30 @@
         "kind": "off_added",
         "corrected": true
       }
+    },
+    {
+      "id": "discord-bot-schedule-off_added-2026-07-07-entry",
+      "date": "2026-07-07",
+      "detectedAt": "2026-06-30T21:17:31.945Z",
+      "type": "day_off",
+      "title": "💤 お休み追加: 7/7",
+      "source": "discord-bot",
+      "sourceUrl": "https://m-surprise.com/profile/?id=4967",
+      "metadata": {
+        "category": "schedule",
+        "kind": "off_added",
+        "after": {
+          "type": "off"
+        }
+      }
     }
   ],
   "rankings": {
     "currentRankingSummary": {
-      "month": "2026-05",
+      "month": "2026-07",
       "nominationRank": null,
       "ratioRank": null,
-      "detectedAt": "2026-06-30T14:37:31.771Z"
+      "detectedAt": "2026-06-30T21:17:31.925Z"
     },
     "rankingSnapshots": [
       {
@@ -1922,6 +1936,64 @@
       {
         "month": "2026-05",
         "detectedAt": "2026-06-30T14:37:31.771Z",
+        "nominationTop5": [
+          {
+            "rank": 1,
+            "castNo": 17,
+            "castName": "りり"
+          },
+          {
+            "rank": 2,
+            "castNo": 67,
+            "castName": "あかね"
+          },
+          {
+            "rank": 3,
+            "castNo": 48,
+            "castName": "りの"
+          },
+          {
+            "rank": 4,
+            "castNo": 60,
+            "castName": "えみ"
+          },
+          {
+            "rank": 5,
+            "castNo": 20,
+            "castName": "まふゆ"
+          }
+        ],
+        "ratioTop5": [
+          {
+            "rank": 1,
+            "castNo": 48,
+            "castName": "りの"
+          },
+          {
+            "rank": 2,
+            "castNo": 17,
+            "castName": "りり"
+          },
+          {
+            "rank": 3,
+            "castNo": 20,
+            "castName": "まふゆ"
+          },
+          {
+            "rank": 4,
+            "castNo": 60,
+            "castName": "えみ"
+          },
+          {
+            "rank": 5,
+            "castNo": 26,
+            "castName": "みひろ"
+          }
+        ]
+      },
+      {
+        "month": "2026-07",
+        "detectedAt": "2026-06-30T21:17:31.925Z",
         "nominationTop5": [
           {
             "rank": 1,
