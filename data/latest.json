@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-07-01T05:22:30.826Z",
+  "fetchedAt": "2026-07-01T05:32:30.735Z",
   "source": {
     "profileUrl": "https://m-surprise.com/profile/?id=4967",
     "rankingUrl": "https://m-surprise.com/ranking/",
@@ -170,9 +170,9 @@
   "rankings": {
     "currentRankingSummary": {
       "month": "2026-07",
-      "nominationRank": null,
-      "ratioRank": null,
-      "detectedAt": "2026-07-01T05:22:30.802Z"
+      "nominationRank": 5,
+      "ratioRank": 5,
+      "detectedAt": "2026-07-01T05:32:30.716Z"
     },
     "rankingSnapshots": [
       {
@@ -351,32 +351,32 @@
       },
       {
         "month": "2026-07",
-        "detectedAt": "2026-07-01T05:22:30.802Z",
+        "detectedAt": "2026-07-01T05:32:30.716Z",
         "nominationTop5": [
           {
             "rank": 1,
-            "castNo": 17,
-            "castName": "りり"
-          },
-          {
-            "rank": 2,
-            "castNo": 67,
-            "castName": "あかね"
-          },
-          {
-            "rank": 3,
             "castNo": 48,
             "castName": "りの"
           },
           {
-            "rank": 4,
+            "rank": 2,
+            "castNo": 20,
+            "castName": "まふゆ"
+          },
+          {
+            "rank": 3,
             "castNo": 60,
             "castName": "えみ"
           },
           {
+            "rank": 4,
+            "castNo": 17,
+            "castName": "りり"
+          },
+          {
             "rank": 5,
-            "castNo": 20,
-            "castName": "まふゆ"
+            "castNo": 75,
+            "castName": "まこと"
           }
         ],
         "ratioTop5": [
@@ -387,23 +387,23 @@
           },
           {
             "rank": 2,
-            "castNo": 17,
-            "castName": "りり"
-          },
-          {
-            "rank": 3,
             "castNo": 20,
             "castName": "まふゆ"
           },
           {
+            "rank": 3,
+            "castNo": 17,
+            "castName": "りり"
+          },
+          {
             "rank": 4,
-            "castNo": 60,
-            "castName": "えみ"
+            "castNo": 15,
+            "castName": "ひまり"
           },
           {
             "rank": 5,
-            "castNo": 26,
-            "castName": "みひろ"
+            "castNo": 75,
+            "castName": "まこと"
           }
         ]
       }
