@@ -4,7 +4,7 @@
   "description": "Makoto watch bot for Discord notifications",
   "main": "src/main.js",
   "scripts": {
-    "start": "node src/main.js",
+    "start": "node --use-system-ca src/main.js",
     "check": "node --check src/main.js",
     "playwright:install": "playwright install chromium",
     "export:life-log": "node src/exportLifeLogPayload.js",
