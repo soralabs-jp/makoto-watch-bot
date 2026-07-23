@@ -1,6 +1,6 @@
 {
   "source": "discord-bot",
-  "importedAt": "2026-07-23T09:21:07.431Z",
+  "importedAt": "2026-07-23T09:26:10.620Z",
   "shifts": [
     {
       "id": "fc2-history-2023-10-17",
@@ -1724,7 +1724,7 @@
       "id": "discord-bot-shift-2026-07-23",
       "date": "2026-07-23",
       "status": "off",
-      "updatedAt": "2026-07-23T09:21:07.431Z",
+      "updatedAt": "2026-07-23T09:26:10.620Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-07-23"
     },
@@ -1732,7 +1732,7 @@
       "id": "discord-bot-shift-2026-07-24",
       "date": "2026-07-24",
       "status": "off",
-      "updatedAt": "2026-07-23T09:21:07.431Z",
+      "updatedAt": "2026-07-23T09:26:10.620Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-07-24"
     },
@@ -1740,7 +1740,7 @@
       "id": "discord-bot-shift-2026-07-25",
       "date": "2026-07-25",
       "status": "off",
-      "updatedAt": "2026-07-23T09:21:07.431Z",
+      "updatedAt": "2026-07-23T09:26:10.620Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-07-25"
     },
@@ -1750,7 +1750,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "15:00",
-      "updatedAt": "2026-07-23T09:21:07.431Z",
+      "updatedAt": "2026-07-23T09:26:10.620Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-07-26"
     },
@@ -1760,7 +1760,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "18:00",
-      "updatedAt": "2026-07-23T09:21:07.431Z",
+      "updatedAt": "2026-07-23T09:26:10.620Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-07-27"
     },
@@ -1768,7 +1768,7 @@
       "id": "discord-bot-shift-2026-07-28",
       "date": "2026-07-28",
       "status": "off",
-      "updatedAt": "2026-07-23T09:21:07.431Z",
+      "updatedAt": "2026-07-23T09:26:10.620Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-07-28"
     },
@@ -1776,7 +1776,7 @@
       "id": "discord-bot-shift-2026-07-29",
       "date": "2026-07-29",
       "status": "off",
-      "updatedAt": "2026-07-23T09:21:07.431Z",
+      "updatedAt": "2026-07-23T09:26:10.620Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-07-29"
     }
