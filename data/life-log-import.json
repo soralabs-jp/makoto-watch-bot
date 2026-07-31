@@ -1,6 +1,6 @@
 {
   "source": "discord-bot",
-  "importedAt": "2026-07-30T09:12:31.935Z",
+  "importedAt": "2026-07-31T10:35:22.144Z",
   "shifts": [
     {
       "id": "fc2-history-2023-10-17",
@@ -1721,20 +1721,12 @@
       "sourceId": "schedule:2026-06-05"
     },
     {
-      "id": "discord-bot-shift-2026-07-30",
-      "date": "2026-07-30",
-      "status": "off",
-      "updatedAt": "2026-07-30T09:12:31.935Z",
-      "source": "discord-bot",
-      "sourceId": "schedule:2026-07-30"
-    },
-    {
       "id": "discord-bot-shift-2026-07-31",
       "date": "2026-07-31",
       "status": "working",
       "startTime": "10:00",
       "endTime": "16:00",
-      "updatedAt": "2026-07-30T09:12:31.935Z",
+      "updatedAt": "2026-07-31T10:35:22.144Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-07-31"
     },
@@ -1742,15 +1734,17 @@
       "id": "discord-bot-shift-2026-08-01",
       "date": "2026-08-01",
       "status": "off",
-      "updatedAt": "2026-07-30T09:12:31.935Z",
+      "updatedAt": "2026-07-31T10:35:22.144Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-01"
     },
     {
       "id": "discord-bot-shift-2026-08-02",
       "date": "2026-08-02",
-      "status": "off",
-      "updatedAt": "2026-07-30T09:12:31.935Z",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "18:00",
+      "updatedAt": "2026-07-31T10:35:22.144Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-02"
     },
@@ -1758,7 +1752,7 @@
       "id": "discord-bot-shift-2026-08-03",
       "date": "2026-08-03",
       "status": "off",
-      "updatedAt": "2026-07-30T09:12:31.935Z",
+      "updatedAt": "2026-07-31T10:35:22.144Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-03"
     },
@@ -1766,7 +1760,7 @@
       "id": "discord-bot-shift-2026-08-04",
       "date": "2026-08-04",
       "status": "off",
-      "updatedAt": "2026-07-30T09:12:31.935Z",
+      "updatedAt": "2026-07-31T10:35:22.144Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-04"
     },
@@ -1774,9 +1768,17 @@
       "id": "discord-bot-shift-2026-08-05",
       "date": "2026-08-05",
       "status": "off",
-      "updatedAt": "2026-07-30T09:12:31.935Z",
+      "updatedAt": "2026-07-31T10:35:22.144Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-05"
+    },
+    {
+      "id": "discord-bot-shift-2026-08-06",
+      "date": "2026-08-06",
+      "status": "off",
+      "updatedAt": "2026-07-31T10:35:22.144Z",
+      "source": "discord-bot",
+      "sourceId": "schedule:2026-08-06"
     }
   ],
   "updates": [
@@ -1793,6 +1795,57 @@
         "kind": "off_added",
         "corrected": true
       }
+    },
+    {
+      "id": "discord-bot-diary-added-2026-07-31-27905",
+      "date": "2026-07-31",
+      "detectedAt": "2026-07-31T10:35:22.144Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「ゆかた！」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/27905/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "27905"
+      }
+    },
+    {
+      "id": "discord-bot-schedule-off_to_work-2026-08-02-entry",
+      "date": "2026-08-02",
+      "detectedAt": "2026-07-31T10:35:22.144Z",
+      "type": "shift_update",
+      "title": "🔄 変更: 8/2 お休み -> 10:00-18:00",
+      "source": "discord-bot",
+      "sourceUrl": "https://m-surprise.com/profile/?id=4967",
+      "metadata": {
+        "category": "schedule",
+        "kind": "off_to_work",
+        "before": {
+          "type": "off"
+        },
+        "after": {
+          "type": "work",
+          "start": "10:00",
+          "end": "18:00"
+        }
+      }
+    },
+    {
+      "id": "discord-bot-schedule-off_added-2026-08-06-entry",
+      "date": "2026-08-06",
+      "detectedAt": "2026-07-31T10:35:22.144Z",
+      "type": "day_off",
+      "title": "💤 お休み追加: 8/6",
+      "source": "discord-bot",
+      "sourceUrl": "https://m-surprise.com/profile/?id=4967",
+      "metadata": {
+        "category": "schedule",
+        "kind": "off_added",
+        "after": {
+          "type": "off"
+        }
+      }
     }
   ],
   "rankings": {
@@ -1800,7 +1853,7 @@
       "month": "2026-07",
       "nominationRank": 5,
       "ratioRank": 5,
-      "detectedAt": "2026-07-30T09:12:31.919Z"
+      "detectedAt": "2026-07-31T10:35:22.123Z"
     },
     "rankingSnapshots": [
       {
@@ -1979,7 +2032,7 @@
       },
       {
         "month": "2026-07",
-        "detectedAt": "2026-07-30T09:12:31.919Z",
+        "detectedAt": "2026-07-31T10:35:22.123Z",
         "nominationTop5": [
           {
             "rank": 1,
