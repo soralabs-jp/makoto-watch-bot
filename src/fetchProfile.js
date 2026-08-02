@@ -34,9 +34,9 @@ async function fetchProfile() {
   return {
     sourceUrl: config.profileUrl,
     fetchedAt,
-    profile: extractProfile($),
+    profile: config.siteType === "hyakka" ? extractHyakkaProfile($) : extractProfile($),
     photos: extractPhotos($),
-    schedule: extractSchedule($, fetchedAt),
+    schedule: config.siteType === "hyakka" ? extractHyakkaSchedule($, fetchedAt) : extractSchedule($, fetchedAt),
   };
 }
 
@@ -123,6 +123,50 @@ function extractProfile($) {
   };
 }
 
+function extractHyakkaProfile($) {
+  const nameText = normalizeInlineText($(".profile-info__def-data--name").first().text());
+  const sizeText = normalizeInlineText($(".profile-info__def-data--size").first().text());
+  const titleText = normalizeInlineText($(".profile > h3").first().text());
+
+  if (!nameText) {
+    throw new Error("百花繚乱プロフィールの名前が取得できませんでした");
+  }
+
+  const nameMatch = nameText.match(/No\.\s*\d+\s*([^(]+?)(?:\((\d+)\))?$/);
+  const sizeMatch = sizeText.match(/T[.:]\s*(\d+)\s*B[.:]\s*(\d+\([^)]+\))\s*W[.:]\s*(\d+)\s*H[.:]\s*(\d+)/i);
+
+  const basicInfo = {};
+  if (nameMatch?.[2]) {
+    basicInfo.age = nameMatch[2];
+  }
+  if (sizeMatch) {
+    basicInfo.height = sizeMatch[1];
+    basicInfo.bust = sizeMatch[2];
+    basicInfo.waist = sizeMatch[3];
+    basicInfo.hip = sizeMatch[4];
+    basicInfo.size = `B:${sizeMatch[2]} W:${sizeMatch[3]} H:${sizeMatch[4]}`;
+  }
+
+  $(".profile-enquete__def").each((_, element) => {
+    const node = $(element);
+    const label = normalizeInlineText(node.find(".profile-enquete__def-tit").first().text());
+    const value = normalizeInlineText(node.find(".profile-enquete__def-data").first().text());
+    if (label && value) {
+      basicInfo[LABEL_KEY_MAP[label] || label] = value;
+    }
+  });
+
+  return {
+    name: nameMatch?.[1]?.trim() || nameText,
+    basicInfo,
+    texts: {
+      catchcopy: titleText || "",
+      message: normalizeText($(".profile-info__def-data--comment-girls").first().text()),
+      shopMessage: normalizeText($(".profile-info__def-data--comment-store").first().text()),
+    },
+  };
+}
+
 function extractSchedule($, fetchedAt) {
   const dateLabels = $(".profile-week__date li")
     .map((_, element) => normalizeInlineText($(element).text()))
@@ -147,6 +191,52 @@ function extractSchedule($, fetchedAt) {
     }
 
     if (text.includes("\u8981\u78ba\u8a8d")) {
+      schedule[date] = { type: "pending" };
+      continue;
+    }
+
+    if (times.length >= 2) {
+      schedule[date] = {
+        type: "work",
+        start: normalizeTime(times[0]),
+        end: normalizeTime(times[1]),
+      };
+      continue;
+    }
+
+    schedule[date] = {
+      type: "unknown",
+      raw: text,
+    };
+  }
+
+  return schedule;
+}
+
+function extractHyakkaSchedule($, fetchedAt) {
+  const dateLabels = $(".profile-week__list-item")
+    .map((_, element) => normalizeInlineText($(element).text()))
+    .get();
+  const timeNodes = $(".profile-week__list-time-item").toArray();
+
+  if (dateLabels.length === 0 || timeNodes.length === 0) {
+    throw new Error("百花繚乱の出勤スケジュール取得に失敗しました");
+  }
+
+  const dates = guessDateSequence(dateLabels, new Date(fetchedAt));
+  const schedule = {};
+
+  for (const [index, date] of dates.entries()) {
+    const node = $(timeNodes[index]);
+    const text = normalizeText(node.text());
+    const times = text.match(/\d{1,2}:\d{2}/g) || [];
+
+    if (text.includes("お休み")) {
+      schedule[date] = { type: "off" };
+      continue;
+    }
+
+    if (text.includes("要確認")) {
       schedule[date] = { type: "pending" };
       continue;
     }

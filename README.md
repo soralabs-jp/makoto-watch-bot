@@ -6,8 +6,36 @@
 
 - 対象プロフィール: `https://m-surprise.com/profile/?id=4967`
 - 通知方式: Discord Incoming Webhook
-- 実行方式: ローカル実行または GitHub Actions で 5 分おき
-- 永続化方式: `data/latest.json` と `data/previous.json` を更新し、Actions では必要に応じてリポジトリへコミット
+- 実行方式: ローカル実行または GitHub Actions の `workflow_dispatch`
+- 永続化方式: `data/<target>/latest.json` と `data/<target>/previous.json` を更新し、Actions では必要に応じてリポジトリへコミット
+
+## 複数 target 運用
+
+この BOT は `TARGET` で通知対象を切り替えます。対象ごとの既定値は [src/targets.js](/d:/dev/makoto-watch-bot/src/targets.js:1) にまとめています。
+
+現在の target:
+
+- `makoto`: まことちゃん通知。ランキング、写メ日記、まことちゃん管理向け export あり。
+- `miki`: みきちゃん通知。百花繚乱のプロフィール/写真/出勤のみ。ランキング、写メブログ、まことちゃん管理向け export なし。
+
+状態ファイルは target ごとに分かれます。
+
+```text
+data/
+  makoto/
+    latest.json
+    previous.json
+    ranking-state.json
+    life-log-import.json
+  miki/
+    latest.json
+    previous.json
+    ranking-state.json
+```
+
+既存の `data/latest.json`, `data/previous.json`, `data/ranking-state.json` は `makoto` の初回移行用に読み継ぎます。新しい実行結果は `data/makoto/` に保存されます。
+
+他の子を増やす場合は、[src/targets.js](/d:/dev/makoto-watch-bot/src/targets.js:1) に target を追加します。別店舗の場合は `siteType` ごとのパーサー追加が必要です。同じ店舗/同じHTML構造なら URL と通知設定を追加するだけで増やせます。
 
 ## 必要環境
 
@@ -27,9 +55,11 @@ npx playwright install chromium
 `.env.example` を参考に `.env` を作成してください。
 
 ```env
+TARGET=makoto
 PROFILE_URL=https://m-surprise.com/profile/?id=4967
 DIARY_URL=https://diary.m-surprise.com/category/no-75-%e3%81%be%e3%81%93%e3%81%a8/
 DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...
+LIFE_LOG_EXPORT=true
 TIMEZONE=Asia/Tokyo
 DIARY_PAGE_LIMIT=3
 NOTIFY_INITIAL_SNAPSHOT=false
@@ -44,10 +74,19 @@ NOTIFY_DIARY=true
 - `DIARY_PAGE_LIMIT`: 写メ日記カテゴリの先頭から何ページ取得するか。1 ページ 5 件前後です。
 - `NOTIFY_INITIAL_SNAPSHOT`: 初回実行時に「初期スナップショット作成完了」を通知するか。
 - `NOTIFY_SCHEDULE`, `NOTIFY_PROFILE`, `NOTIFY_PHOTOS`, `NOTIFY_DIARY`: 通知種別の ON/OFF。
+- `LIFE_LOG_EXPORT`: まことちゃん管理向け export を出すか。`miki` は既定で `false`。
+- target 別に上書きしたい場合は `MIKI_DISCORD_WEBHOOK_URL` のように `<TARGET>_<設定名>` を使います。
 
 ## ローカル実行方法
 
 ```bash
+npm start
+```
+
+みきちゃんを実行する場合:
+
+```powershell
+$env:TARGET = "miki"
 npm start
 ```
 
@@ -56,11 +95,11 @@ npm start
 ## GitHub Actions 設定方法
 
 1. このプロジェクトを GitHub リポジトリに push します。
-2. Repository Secret に `DISCORD_WEBHOOK_URL` を追加します。
+2. Repository Secret に `DISCORD_WEBHOOK_URL_MAKOTO` と必要なら `DISCORD_WEBHOOK_URL_MIKI` を追加します。既存の `DISCORD_WEBHOOK_URL` は `makoto` の fallback として使えます。
 3. 必要なら Repository Variables に以下を追加します。
 
-- `PROFILE_URL`
-- `DIARY_URL`
+- `MAKOTO_PROFILE_URL` / `MIKI_PROFILE_URL`
+- `MAKOTO_DIARY_URL`
 - `DIARY_PAGE_LIMIT`
 - `NOTIFY_INITIAL_SNAPSHOT`
 - `NOTIFY_SCHEDULE`
@@ -70,9 +109,35 @@ npm start
 
 Workflow は `.github/workflows/watch.yml` で定義しています。
 
-- 5 分おき実行: `*/5 * * * *`
-- 手動実行: `workflow_dispatch`
-- 実行後に `data/latest.json` と `data/previous.json` が変わっていれば自動コミット
+- GitHub Actions の起動方法: `workflow_dispatch`
+- `target` input で `makoto` / `miki` を選択
+- 重複実行防止: `concurrency`
+- 実行後に `data/<target>/` が変わっていれば自動コミット
+
+### GAS から 5 分おきに GitHub Actions を起動する
+
+GitHub Actions の `schedule` は混雑時に遅延しやすいため、Apps Script の時間主導トリガーから `workflow_dispatch` を叩く運用に寄せられます。
+
+1. Google Apps Script で新規プロジェクトを作成します
+2. [scripts/gas/dispatch-watch-workflow.gs](/d:/dev/makoto-watch-bot/scripts/gas/dispatch-watch-workflow.gs:1) の内容を貼り付けるか、`clasp` で同期します
+3. `GITHUB_OWNER` と `WORKFLOW_REF` を自分の環境に合わせて変更します
+4. Apps Script の `Script Properties` に `GITHUB_TOKEN` を追加します
+5. `dispatchMakotoWatch` または `dispatchMikiWatch` に対して `5 分おき` の時間主導トリガーを設定します
+
+`GITHUB_TOKEN` には、このリポジトリの Actions を起動できる GitHub token を使ってください。`workflow_dispatch` を叩く用途なので、最小権限で発行するのがおすすめです。
+
+### clasp でローカル管理する
+
+Apps Script のコードはローカルと GitHub で管理しつつ、`clasp` で Google 側へ同期できます。
+
+1. Apps Script プロジェクトを作成し、Script ID を控えます
+2. `.clasp.json.example` を `.clasp.json` にコピーします
+3. `.clasp.json` の `scriptId` を自分の Script ID に置き換えます
+4. 必要なら `scripts/gas/dispatch-watch-workflow.gs` の定数を修正します
+5. `clasp login` を実行します
+6. `npm run gas:push` で `scripts/gas/` を Apps Script 側へ反映します
+
+`scripts/gas/appsscript.json` は Apps Script のマニフェストです。`rootDir` は `scripts/gas` にしてあるので、このフォルダ配下だけが同期されます。
 
 ## Discord Webhook 作成方法
 
@@ -163,6 +228,7 @@ Workflow は `.github/workflows/watch.yml` で定義しています。
 makoto-watch-bot/
   src/
     browser.js
+    targets.js
     config.js
     fetchProfile.js
     fetchDiary.js
@@ -175,8 +241,12 @@ makoto-watch-bot/
     storage.js
     main.js
   data/
-    latest.json
-    previous.json
+    makoto/
+      latest.json
+      previous.json
+    miki/
+      latest.json
+      previous.json
   .github/workflows/watch.yml
   package.json
   README.md

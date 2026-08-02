@@ -1,8 +1,16 @@
-name: Watch Makoto
+name: Watch Cast
 
 on:
   workflow_dispatch:
     inputs:
+      target:
+        description: "Target cast"
+        required: false
+        default: makoto
+        type: choice
+        options:
+          - makoto
+          - miki
       test_notification:
         description: "Send a test notification only"
         required: false
@@ -10,7 +18,7 @@ on:
         type: boolean
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event.inputs.target || 'makoto' }}
   cancel-in-progress: false
 
 permissions:
@@ -19,6 +27,8 @@ permissions:
 jobs:
   watch:
     runs-on: ubuntu-latest
+    env:
+      TARGET: ${{ github.event.inputs.target || 'makoto' }}
 
     steps:
       - name: Checkout
@@ -41,27 +51,22 @@ jobs:
 
       - name: Run watcher
         env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          DISCORD_USERNAME: まことちゃん通知
-          PROFILE_URL: ${{ vars.PROFILE_URL || 'https://m-surprise.com/profile/?id=4967' }}
-          RANKING_URL: ${{ vars.RANKING_URL || 'https://m-surprise.com/ranking/' }}
-          DIARY_URL: ${{ vars.DIARY_URL || 'https://diary.m-surprise.com/category/no-75-%e3%81%be%e3%81%93%e3%81%a8/' }}
-          RANKING_TARGET_CAST_NO: ${{ vars.RANKING_TARGET_CAST_NO || '75' }}
+          DISCORD_WEBHOOK_URL_MAKOTO: ${{ secrets.DISCORD_WEBHOOK_URL_MAKOTO || secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_WEBHOOK_URL_MIKI: ${{ secrets.DISCORD_WEBHOOK_URL_MIKI }}
           TIMEZONE: Asia/Tokyo
           FETCH_TIMEOUT_MS: 60000
           FETCH_RETRY_COUNT: 3
-          DIARY_PAGE_LIMIT: ${{ vars.DIARY_PAGE_LIMIT || '3' }}
-          NOTIFY_INITIAL_SNAPSHOT: ${{ vars.NOTIFY_INITIAL_SNAPSHOT || 'false' }}
-          NOTIFY_SCHEDULE: ${{ vars.NOTIFY_SCHEDULE || 'true' }}
-          NOTIFY_PROFILE: ${{ vars.NOTIFY_PROFILE || 'true' }}
-          NOTIFY_PHOTOS: ${{ vars.NOTIFY_PHOTOS || 'true' }}
-          NOTIFY_DIARY: ${{ vars.NOTIFY_DIARY || 'true' }}
-          NOTIFY_RANKING: ${{ vars.NOTIFY_RANKING || 'true' }}
           TEST_NOTIFICATION: ${{ github.event.inputs.test_notification || 'false' }}
-        run: npm start
+        run: |
+          if [ "$TARGET" = "miki" ]; then
+            export DISCORD_WEBHOOK_URL="$DISCORD_WEBHOOK_URL_MIKI"
+          else
+            export DISCORD_WEBHOOK_URL="$DISCORD_WEBHOOK_URL_MAKOTO"
+          fi
+          npm start
 
       - name: Export life-log payload
-        if: ${{ github.event.inputs.test_notification != 'true' }}
+        if: ${{ github.event.inputs.test_notification != 'true' && (github.event.inputs.target == '' || github.event.inputs.target == 'makoto') }}
         run: npm run export:life-log
 
       - name: Commit updated snapshots
@@ -69,18 +74,19 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
-          if ! git diff --quiet -- data/latest.json data/previous.json data/ranking-state.json data/life-log-import.json; then
+          DATA_PATH="data/${TARGET}"
+          if [ -n "$(git status --porcelain -- "$DATA_PATH")" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-            git add data/latest.json data/previous.json data/ranking-state.json data/life-log-import.json
-            git commit -m "chore: update makoto snapshots"
+            git add "$DATA_PATH"
+            git commit -m "chore: update ${TARGET} snapshots"
             resolve_snapshot_rebase() {
               if [ ! -d .git/rebase-merge ] && [ ! -d .git/rebase-apply ]; then
                 return 1
               fi
-              git checkout --theirs -- data/latest.json data/previous.json data/ranking-state.json data/life-log-import.json
-              git add data/latest.json data/previous.json data/ranking-state.json data/life-log-import.json
+              git checkout --theirs -- "$DATA_PATH"
+              git add "$DATA_PATH"
               GIT_EDITOR=true git rebase --continue
             }
             if ! git pull --rebase origin main; then
@@ -99,4 +105,3 @@ jobs:
               fi
             done
           fi
-

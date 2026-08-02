@@ -19,14 +19,14 @@ const { readJson, writeJson } = require("./storage");
 async function main() {
   if (config.testNotification) {
     await notifyDiscord([
-      `🧪 テスト通知です ${config.profileUrl}`,
+      `🧪 ${config.target} テスト通知です ${config.profileUrl}`,
     ]);
     console.log("Test notification sent");
     return;
   }
 
-  const previousLatest = await readJson(config.dataPaths.latest, null);
-  const previousRankingState = normalizeRankingState(await readJson(config.dataPaths.rankingState, null));
+  const previousLatest = await readJsonWithLegacyFallback("latest", null);
+  const previousRankingState = normalizeRankingState(await readJsonWithLegacyFallback("rankingState", null));
 
   try {
     const profileData = await fetchWithSnapshotFallback({
@@ -43,11 +43,14 @@ async function main() {
             }
           : null,
     });
-    const diary = await fetchWithSnapshotFallback({
-      label: "diary",
-      fetcher: fetchDiary,
-      fallbackValue: previousLatest?.diary ?? null,
-    });
+    const diary =
+      config.notify.diary && config.diaryUrl
+        ? await fetchWithSnapshotFallback({
+            label: "diary",
+            fetcher: fetchDiary,
+            fallbackValue: previousLatest?.diary ?? null,
+          })
+        : [];
     const latestRanking = await fetchLatestRanking(previousRankingState);
     const nextRankingState = buildNextRankingState(previousRankingState, latestRanking);
 
@@ -79,7 +82,7 @@ async function main() {
         await notifyDiscord(["🆕 初期スナップショット作成完了"]);
       }
 
-      console.log("Initial snapshot saved");
+      console.log(`Initial snapshot saved for target=${config.target}`);
       return;
     }
 
@@ -95,7 +98,7 @@ async function main() {
     await writeJson(config.dataPaths.latest, currentSnapshot);
     await writeJson(config.dataPaths.rankingState, updatedRankingState);
 
-    console.log(`Completed. events=${events.length}`);
+    console.log(`Completed. target=${config.target} events=${events.length}`);
   } catch (error) {
     console.error("[main] execution failed", error);
 
@@ -113,7 +116,13 @@ async function main() {
 }
 
 function hasSnapshot(snapshot) {
-  return Boolean(snapshot && snapshot.profile && snapshot.photos && snapshot.schedule && snapshot.diary);
+  return Boolean(
+    snapshot &&
+      snapshot.profile &&
+      snapshot.photos &&
+      snapshot.schedule &&
+      (!config.notify.diary || snapshot.diary),
+  );
 }
 
 function collectEvents(previousSnapshot, currentSnapshot) {
@@ -141,6 +150,10 @@ function formatEventMessage(event, snapshot) {
 }
 
 async function fetchLatestRanking(previousRankingState) {
+  if (!config.notify.ranking || !config.rankingUrl || !config.rankingTargetCastNo) {
+    return null;
+  }
+
   try {
     return await fetchRanking(previousRankingState);
   } catch (error) {
@@ -151,18 +164,32 @@ async function fetchLatestRanking(previousRankingState) {
 
 async function maybeNotifyRanking(previousRankingState, nextRankingState) {
   const summary = nextRankingState.currentRankingSummary;
-  if (!config.notify.ranking || !shouldNotifyRanking(previousRankingState, summary)) {
+  if (!summary || !config.notify.ranking || !shouldNotifyRanking(previousRankingState, summary)) {
     return nextRankingState;
   }
 
   await notifyDiscord(createRankingNotificationLines(summary, previousRankingState.currentRankingSummary), {
-    header: "まことちゃんランキング通知",
+    header: `${config.discordUsername} ランキング通知`,
   });
 
   return markRankingMonthNotified(nextRankingState, summary.month);
 }
 
 main();
+
+async function readJsonWithLegacyFallback(key, defaultValue) {
+  const value = await readJson(config.dataPaths[key], null);
+  if (value != null) {
+    return value;
+  }
+
+  const legacyPath = config.legacyDataPaths?.[key];
+  if (!legacyPath) {
+    return defaultValue;
+  }
+
+  return readJson(legacyPath, defaultValue);
+}
 
 async function fetchWithSnapshotFallback({ label, fetcher, fallbackValue }) {
   try {

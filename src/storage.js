@@ -1,5 +1,5 @@
-﻿const fs = require("fs/promises");
-const { DATA_DIR } = require("./config");
+const fs = require("fs/promises");
+const path = require("path");
 
 async function readJson(filePath, fallback = null) {
   try {
@@ -14,7 +14,7 @@ async function readJson(filePath, fallback = null) {
 }
 
 async function writeJson(filePath, value) {
-  await fs.mkdir(DATA_DIR, { recursive: true });
+  await fs.mkdir(path.dirname(filePath), { recursive: true });
   await fs.writeFile(filePath, `${JSON.stringify(value, null, 2)}\n`, "utf8");
 }
 

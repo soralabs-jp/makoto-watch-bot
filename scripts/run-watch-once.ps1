@@ -1,3 +1,7 @@
+param(
+  [string]$Target = "makoto"
+)
+
 $ErrorActionPreference = "Continue"
 
 $repoRoot = Split-Path -Parent $PSScriptRoot
@@ -8,7 +12,7 @@ New-Item -ItemType Directory -Force -Path $logDir | Out-Null
 Set-Location $repoRoot
 
 $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss zzz"
-"[$timestamp] starting makoto watch" | Add-Content -Path $logPath -Encoding UTF8
+"[$timestamp] starting $Target watch" | Add-Content -Path $logPath -Encoding UTF8
 
 function Add-LogLine {
   param([string]$Line)
@@ -38,11 +42,9 @@ function Resolve-SnapshotRebase {
   }
 
   Add-LogLine "Resolving snapshot rebase conflict"
+  $dataPath = "data/$Target"
   $dataFiles = @(
-    "data/latest.json",
-    "data/previous.json",
-    "data/ranking-state.json",
-    "data/life-log-import.json"
+    $dataPath
   )
 
   $exitCode = Invoke-LoggedCommand { & git checkout --theirs -- $dataFiles }
@@ -64,17 +66,17 @@ try {
     throw "Failed to resolve existing snapshot rebase"
   }
 
+  $env:TARGET = $Target
+
   $exitCode = Invoke-LoggedCommand { & node --use-system-ca .\src\main.js }
-  if ($exitCode -eq 0) {
+  if ($exitCode -eq 0 -and $Target -eq "makoto") {
     $exitCode = Invoke-LoggedCommand { & npm.cmd run export:life-log }
   }
 
   if ($exitCode -eq 0) {
+    $dataPath = "data/$Target"
     $dataFiles = @(
-      "data/latest.json",
-      "data/previous.json",
-      "data/ranking-state.json",
-      "data/life-log-import.json"
+      $dataPath
     )
 
     $exitCode = Invoke-LoggedCommand { & git add -- $dataFiles }
@@ -84,7 +86,7 @@ try {
       if ($LASTEXITCODE -eq 0) {
         Add-LogLine "No data changes to publish"
       } else {
-        $exitCode = Invoke-LoggedCommand { & git commit -m "chore: update makoto snapshots" }
+        $exitCode = Invoke-LoggedCommand { & git commit -m "chore: update $Target snapshots" }
         if ($exitCode -eq 0) {
           $exitCode = Invoke-LoggedCommand { & git -c rebase.autoStash=true pull --rebase origin main }
           if ($exitCode -ne 0) {
@@ -113,6 +115,6 @@ try {
 }
 
 $finishedAt = Get-Date -Format "yyyy-MM-dd HH:mm:ss zzz"
-"[$finishedAt] finished makoto watch exit=$exitCode" | Add-Content -Path $logPath -Encoding UTF8
+"[$finishedAt] finished $Target watch exit=$exitCode" | Add-Content -Path $logPath -Encoding UTF8
 
 exit $exitCode

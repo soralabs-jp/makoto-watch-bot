@@ -53,7 +53,7 @@ function extractDiaryEntries(html, pageUrl) {
         .map((_, element) => normalizeInlineText($(element).text()))
         .get();
 
-      if (!categoryTexts.some((text) => text.includes("No.75") && text.includes("\u307e\u3053\u3068"))) {
+      if (!categoryTexts.some((text) => matchesDiaryCategory(text))) {
         return null;
       }
 
@@ -70,6 +70,15 @@ function extractDiaryEntries(html, pageUrl) {
       };
     })
     .filter(Boolean);
+}
+
+function matchesDiaryCategory(text) {
+  const keywords = config.diaryCategoryKeywords || [];
+  if (keywords.length === 0) {
+    return true;
+  }
+
+  return keywords.every((keyword) => text.includes(keyword));
 }
 
 module.exports = { fetchDiary };
