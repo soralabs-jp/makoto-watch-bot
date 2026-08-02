@@ -1,6 +1,6 @@
 {
   "source": "makoto-discord-bot",
-  "importedAt": "2026-08-02T11:02:31.414Z",
+  "importedAt": "2026-08-02T11:06:10.418Z",
   "shifts": [
     {
       "id": "makoto-discord-bot-shift-2026-06-05",
@@ -16,7 +16,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "18:00",
-      "updatedAt": "2026-08-02T11:02:31.414Z",
+      "updatedAt": "2026-08-02T11:06:10.418Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-02"
     },
@@ -24,7 +24,7 @@
       "id": "makoto-discord-bot-shift-2026-08-03",
       "date": "2026-08-03",
       "status": "off",
-      "updatedAt": "2026-08-02T11:02:31.414Z",
+      "updatedAt": "2026-08-02T11:06:10.418Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-03"
     },
@@ -34,7 +34,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "18:00",
-      "updatedAt": "2026-08-02T11:02:31.414Z",
+      "updatedAt": "2026-08-02T11:06:10.418Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-04"
     },
@@ -44,7 +44,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "15:00",
-      "updatedAt": "2026-08-02T11:02:31.414Z",
+      "updatedAt": "2026-08-02T11:06:10.418Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-05"
     },
@@ -52,7 +52,7 @@
       "id": "makoto-discord-bot-shift-2026-08-06",
       "date": "2026-08-06",
       "status": "off",
-      "updatedAt": "2026-08-02T11:02:31.414Z",
+      "updatedAt": "2026-08-02T11:06:10.418Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-06"
     },
@@ -60,7 +60,7 @@
       "id": "makoto-discord-bot-shift-2026-08-07",
       "date": "2026-08-07",
       "status": "off",
-      "updatedAt": "2026-08-02T11:02:31.414Z",
+      "updatedAt": "2026-08-02T11:06:10.418Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-07"
     },
@@ -68,7 +68,7 @@
       "id": "makoto-discord-bot-shift-2026-08-08",
       "date": "2026-08-08",
       "status": "off",
-      "updatedAt": "2026-08-02T11:02:31.414Z",
+      "updatedAt": "2026-08-02T11:06:10.418Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-08"
     }
