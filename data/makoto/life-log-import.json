@@ -1,6 +1,6 @@
 {
   "source": "makoto-discord-bot",
-  "importedAt": "2026-08-02T14:46:21.338Z",
+  "importedAt": "2026-08-02T14:47:32.184Z",
   "shifts": [
     {
       "id": "makoto-discord-bot-shift-2026-06-05",
@@ -16,7 +16,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "18:00",
-      "updatedAt": "2026-08-02T14:46:21.338Z",
+      "updatedAt": "2026-08-02T14:47:32.184Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-02"
     },
@@ -24,7 +24,7 @@
       "id": "makoto-discord-bot-shift-2026-08-03",
       "date": "2026-08-03",
       "status": "off",
-      "updatedAt": "2026-08-02T14:46:21.338Z",
+      "updatedAt": "2026-08-02T14:47:32.184Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-03"
     },
@@ -34,7 +34,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "18:00",
-      "updatedAt": "2026-08-02T14:46:21.338Z",
+      "updatedAt": "2026-08-02T14:47:32.184Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-04"
     },
@@ -44,7 +44,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "15:00",
-      "updatedAt": "2026-08-02T14:46:21.338Z",
+      "updatedAt": "2026-08-02T14:47:32.184Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-05"
     },
@@ -52,7 +52,7 @@
       "id": "makoto-discord-bot-shift-2026-08-06",
       "date": "2026-08-06",
       "status": "off",
-      "updatedAt": "2026-08-02T14:46:21.338Z",
+      "updatedAt": "2026-08-02T14:47:32.184Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-06"
     },
@@ -60,7 +60,7 @@
       "id": "makoto-discord-bot-shift-2026-08-07",
       "date": "2026-08-07",
       "status": "off",
-      "updatedAt": "2026-08-02T14:46:21.338Z",
+      "updatedAt": "2026-08-02T14:47:32.184Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-07"
     },
@@ -68,7 +68,7 @@
       "id": "makoto-discord-bot-shift-2026-08-08",
       "date": "2026-08-08",
       "status": "off",
-      "updatedAt": "2026-08-02T14:46:21.338Z",
+      "updatedAt": "2026-08-02T14:47:32.184Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-08"
     }
@@ -94,7 +94,7 @@
       "month": "2026-08",
       "nominationRank": null,
       "ratioRank": null,
-      "detectedAt": "2026-08-02T14:42:31.952Z"
+      "detectedAt": "2026-08-02T14:47:32.162Z"
     },
     "rankingSnapshots": [
       {
@@ -331,7 +331,7 @@
       },
       {
         "month": "2026-08",
-        "detectedAt": "2026-08-02T14:42:31.952Z",
+        "detectedAt": "2026-08-02T14:47:32.162Z",
         "nominationTop5": [
           {
             "rank": 1,
