@@ -24,6 +24,9 @@ const targets = {
     diaryCategoryKeywords: ["No.80", "みき"],
     rankingTargetCastNo: null,
     discordUsername: "みきちゃん通知",
+    userAgent:
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
+      "(KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
     lifeLogExport: false,
     notify: {
       schedule: true,

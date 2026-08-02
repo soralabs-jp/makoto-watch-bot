@@ -53,8 +53,10 @@ const config = {
     ranking: parseBoolean(getEnv("NOTIFY_RANKING"), targetConfig.notify.ranking),
   },
   userAgent:
+    getEnv("USER_AGENT") ||
+    targetConfig.userAgent ||
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
-    "(KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 MakotoWatchBot/1.0",
+      "(KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 MakotoWatchBot/1.0",
   dataPaths: {
     latest: path.join(targetDataDir, "latest.json"),
     previous: path.join(targetDataDir, "previous.json"),
