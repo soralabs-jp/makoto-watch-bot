@@ -1,6 +1,6 @@
 {
   "source": "makoto-discord-bot",
-  "importedAt": "2026-08-02T15:02:31.944Z",
+  "importedAt": "2026-08-02T15:06:11.435Z",
   "shifts": [
     {
       "id": "makoto-discord-bot-shift-2026-06-05",
@@ -14,7 +14,7 @@
       "id": "makoto-discord-bot-shift-2026-08-03",
       "date": "2026-08-03",
       "status": "off",
-      "updatedAt": "2026-08-02T15:02:31.944Z",
+      "updatedAt": "2026-08-02T15:06:11.435Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-03"
     },
@@ -24,7 +24,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "18:00",
-      "updatedAt": "2026-08-02T15:02:31.944Z",
+      "updatedAt": "2026-08-02T15:06:11.435Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-04"
     },
@@ -34,7 +34,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "15:00",
-      "updatedAt": "2026-08-02T15:02:31.944Z",
+      "updatedAt": "2026-08-02T15:06:11.435Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-05"
     },
@@ -42,7 +42,7 @@
       "id": "makoto-discord-bot-shift-2026-08-06",
       "date": "2026-08-06",
       "status": "off",
-      "updatedAt": "2026-08-02T15:02:31.944Z",
+      "updatedAt": "2026-08-02T15:06:11.435Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-06"
     },
@@ -50,7 +50,7 @@
       "id": "makoto-discord-bot-shift-2026-08-07",
       "date": "2026-08-07",
       "status": "off",
-      "updatedAt": "2026-08-02T15:02:31.944Z",
+      "updatedAt": "2026-08-02T15:06:11.435Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-07"
     },
@@ -58,7 +58,7 @@
       "id": "makoto-discord-bot-shift-2026-08-08",
       "date": "2026-08-08",
       "status": "off",
-      "updatedAt": "2026-08-02T15:02:31.944Z",
+      "updatedAt": "2026-08-02T15:06:11.435Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-08"
     },
@@ -66,7 +66,7 @@
       "id": "makoto-discord-bot-shift-2026-08-09",
       "date": "2026-08-09",
       "status": "off",
-      "updatedAt": "2026-08-02T15:02:31.944Z",
+      "updatedAt": "2026-08-02T15:06:11.435Z",
       "source": "makoto-discord-bot",
       "sourceId": "schedule:2026-08-09"
     }
@@ -84,22 +84,6 @@
         "category": "schedule",
         "kind": "off_added",
         "corrected": true
-      }
-    },
-    {
-      "id": "makoto-discord-bot-schedule-off_added-2026-08-09-entry",
-      "date": "2026-08-09",
-      "detectedAt": "2026-08-02T15:02:31.944Z",
-      "type": "day_off",
-      "title": "💤 お休み追加: 8/9",
-      "source": "makoto-discord-bot",
-      "sourceUrl": "https://m-surprise.com/profile/?id=4967",
-      "metadata": {
-        "category": "schedule",
-        "kind": "off_added",
-        "after": {
-          "type": "off"
-        }
       }
     }
   ],
