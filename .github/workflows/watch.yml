@@ -75,18 +75,22 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
           DATA_PATH="data/${TARGET}"
-          if [ -n "$(git status --porcelain -- "$DATA_PATH")" ]; then
+          EXTRA_PATHS=""
+          if [ "$TARGET" = "makoto" ]; then
+            EXTRA_PATHS="data/life-log-import.json"
+          fi
+          if [ -n "$(git status --porcelain -- "$DATA_PATH" $EXTRA_PATHS)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-            git add "$DATA_PATH"
+            git add "$DATA_PATH" $EXTRA_PATHS
             git commit -m "chore: update ${TARGET} snapshots"
             resolve_snapshot_rebase() {
               if [ ! -d .git/rebase-merge ] && [ ! -d .git/rebase-apply ]; then
                 return 1
               fi
-              git checkout --theirs -- "$DATA_PATH"
-              git add "$DATA_PATH"
+              git checkout --theirs -- "$DATA_PATH" $EXTRA_PATHS
+              git add "$DATA_PATH" $EXTRA_PATHS
               GIT_EDITOR=true git rebase --continue
             }
             if ! git pull --rebase origin main; then

@@ -46,6 +46,9 @@ function Resolve-SnapshotRebase {
   $dataFiles = @(
     $dataPath
   )
+  if ($Target -eq "makoto") {
+    $dataFiles += "data/life-log-import.json"
+  }
 
   $exitCode = Invoke-LoggedCommand { & git checkout --theirs -- $dataFiles }
   if ($exitCode -ne 0) {
@@ -78,6 +81,9 @@ try {
     $dataFiles = @(
       $dataPath
     )
+    if ($Target -eq "makoto") {
+      $dataFiles += "data/life-log-import.json"
+    }
 
     $exitCode = Invoke-LoggedCommand { & git add -- $dataFiles }
 

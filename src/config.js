@@ -61,8 +61,14 @@ const config = {
     latest: path.join(targetDataDir, "latest.json"),
     previous: path.join(targetDataDir, "previous.json"),
     rankingState: path.join(targetDataDir, "ranking-state.json"),
-    lifeLog: path.join(targetDataDir, "life-log-import.json"),
-    fc2History: path.join(targetDataDir, "fc2-history-import.json"),
+    lifeLog:
+      target === "makoto"
+        ? path.join(DATA_DIR, "life-log-import.json")
+        : path.join(targetDataDir, "life-log-import.json"),
+    fc2History:
+      target === "makoto"
+        ? path.join(DATA_DIR, "fc2-history-import.json")
+        : path.join(targetDataDir, "fc2-history-import.json"),
   },
   legacyDataPaths,
 };

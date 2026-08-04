@@ -26,14 +26,14 @@ data/
     latest.json
     previous.json
     ranking-state.json
-    life-log-import.json
   miki/
     latest.json
     previous.json
     ranking-state.json
+  life-log-import.json
 ```
 
-既存の `data/latest.json`, `data/previous.json`, `data/ranking-state.json` は `makoto` の初回移行用に読み継ぎます。新しい実行結果は `data/makoto/` に保存されます。
+既存の `data/latest.json`, `data/previous.json`, `data/ranking-state.json` は `makoto` の初回移行用に読み継ぎます。新しい実行結果は `data/makoto/` に保存されます。まことちゃん管理向けの export は互換性のため、従来通り `data/life-log-import.json` に出力します。
 
 他の子を増やす場合は、[src/targets.js](/d:/dev/makoto-watch-bot/src/targets.js:1) に target を追加します。別店舗の場合は `siteType` ごとのパーサー追加が必要です。同じ店舗/同じHTML構造なら URL と通知設定を追加するだけで増やせます。
 
@@ -263,7 +263,7 @@ makoto-watch-bot/
 npm run export:life-log
 ```
 
-デフォルトでは `data/latest.json` を読み、`data/life-log-import.json` を出力します。
+デフォルトでは `TARGET=makoto` の `data/makoto/latest.json` を読み、従来通り `data/life-log-import.json` を出力します。
 
 引数を付ける場合:
 
