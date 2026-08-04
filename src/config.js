@@ -44,6 +44,7 @@ const config = {
   diaryPageLimit: Number(getEnv("DIARY_PAGE_LIMIT") || 3),
   notifyInitialSnapshot: parseBoolean(getEnv("NOTIFY_INITIAL_SNAPSHOT"), false),
   testNotification: parseBoolean(getEnv("TEST_NOTIFICATION"), false),
+  lifeLogSource: getEnv("LIFE_LOG_SOURCE") || targetConfig.lifeLogSource || `${target}-discord-bot`,
   lifeLogExport: parseBoolean(getEnv("LIFE_LOG_EXPORT"), targetConfig.lifeLogExport),
   notify: {
     schedule: parseBoolean(getEnv("NOTIFY_SCHEDULE"), targetConfig.notify.schedule),

@@ -7,6 +7,7 @@ const targets = {
     diaryCategoryKeywords: ["No.75", "まこと"],
     rankingTargetCastNo: 75,
     discordUsername: "まことちゃん通知",
+    lifeLogSource: "discord-bot",
     lifeLogExport: true,
     notify: {
       schedule: true,
@@ -24,6 +25,7 @@ const targets = {
     diaryCategoryKeywords: ["No.80", "みき"],
     rankingTargetCastNo: null,
     discordUsername: "みきちゃん通知",
+    lifeLogSource: "miki-discord-bot",
     userAgent:
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
       "(KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",

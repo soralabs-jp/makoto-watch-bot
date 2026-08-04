@@ -20,7 +20,7 @@ function main() {
 
   const latestPath = process.argv[2] ? path.resolve(process.argv[2]) : config.dataPaths.latest;
   const outputPath = process.argv[3] ? path.resolve(process.argv[3]) : config.dataPaths.lifeLog;
-  const source = process.argv[4] || `${config.target}-discord-bot`;
+  const source = process.argv[4] || config.lifeLogSource;
   const previousPath = process.argv[5] ? path.resolve(process.argv[5]) : config.dataPaths.previous;
   const historyPath = process.argv[6] ? path.resolve(process.argv[6]) : config.dataPaths.fc2History;
 
@@ -37,7 +37,10 @@ function main() {
 
   if (fs.existsSync(outputPath)) {
     const existingPayload = readJson(outputPath);
-    existingUpdates = Array.isArray(existingPayload.updates) ? existingPayload.updates : [];
+    existingUpdates = normalizeExistingUpdatesSource(
+      Array.isArray(existingPayload.updates) ? existingPayload.updates : [],
+      source,
+    );
   }
 
   if (fs.existsSync(historyPath)) {
@@ -70,6 +73,24 @@ function readJsonWithLegacyFallback(filePath, legacyPath) {
   }
 
   return readJson(filePath);
+}
+
+function normalizeExistingUpdatesSource(updates, source) {
+  if (source !== "discord-bot") {
+    return updates;
+  }
+
+  return updates.map((update) => {
+    if (update?.source !== "makoto-discord-bot" && !String(update?.id || "").startsWith("makoto-discord-bot-")) {
+      return update;
+    }
+
+    return {
+      ...update,
+      id: String(update.id || "").replace(/^makoto-discord-bot-/, "discord-bot-"),
+      source,
+    };
+  });
 }
 
 if (require.main === module) {
