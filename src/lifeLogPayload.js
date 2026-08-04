@@ -213,12 +213,13 @@ function buildPayload(currentSnapshot, options = {}) {
     : [];
   const diffUpdates = diffEvents.map((event) => toExternalUpdateFromEvent(event, currentSnapshot, source));
   const correctionUpdates = buildKnownCorrectionUpdates(source, currentSnapshot.source?.profileUrl);
+  const existingUpdates = Array.isArray(options.existingUpdates) ? options.existingUpdates : [];
 
   return {
     source,
     importedAt,
     shifts: mergeShiftRecords(historyShifts, correctionShifts, latestShifts),
-    updates: mergeUpdates(correctionUpdates, diffUpdates),
+    updates: mergeUpdates(existingUpdates, correctionUpdates, diffUpdates),
     rankings: normalizeRankings(currentSnapshot.rankings),
   };
 }

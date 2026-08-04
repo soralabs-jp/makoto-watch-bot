@@ -27,11 +27,17 @@ function main() {
   const currentSnapshot = readJsonWithLegacyFallback(latestPath, config.legacyDataPaths?.latest);
   let previousSnapshot = null;
   let historyShifts = [];
+  let existingUpdates = [];
 
   if (fs.existsSync(previousPath)) {
     previousSnapshot = readJson(previousPath);
   } else if (config.legacyDataPaths?.previous && fs.existsSync(config.legacyDataPaths.previous)) {
     previousSnapshot = readJson(config.legacyDataPaths.previous);
+  }
+
+  if (fs.existsSync(outputPath)) {
+    const existingPayload = readJson(outputPath);
+    existingUpdates = Array.isArray(existingPayload.updates) ? existingPayload.updates : [];
   }
 
   if (fs.existsSync(historyPath)) {
@@ -43,6 +49,7 @@ function main() {
     source,
     previousSnapshot,
     historyShifts,
+    existingUpdates,
   });
 
   ensureDirForFile(outputPath);
