@@ -1,6 +1,6 @@
 {
   "source": "discord-bot",
-  "importedAt": "2026-08-17T05:51:08.528Z",
+  "importedAt": "2026-08-17T05:52:31.552Z",
   "shifts": [
     {
       "id": "fc2-history-2023-10-17",
@@ -1724,23 +1724,27 @@
       "id": "discord-bot-shift-2026-08-17",
       "date": "2026-08-17",
       "status": "off",
-      "updatedAt": "2026-08-17T05:51:08.528Z",
+      "updatedAt": "2026-08-17T05:52:31.552Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-17"
     },
     {
       "id": "discord-bot-shift-2026-08-18",
       "date": "2026-08-18",
-      "status": "off",
-      "updatedAt": "2026-08-17T05:51:08.528Z",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-08-17T05:52:31.552Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-18"
     },
     {
       "id": "discord-bot-shift-2026-08-19",
       "date": "2026-08-19",
-      "status": "off",
-      "updatedAt": "2026-08-17T05:51:08.528Z",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-08-17T05:52:31.552Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-19"
     },
@@ -1748,15 +1752,17 @@
       "id": "discord-bot-shift-2026-08-20",
       "date": "2026-08-20",
       "status": "off",
-      "updatedAt": "2026-08-17T05:51:08.528Z",
+      "updatedAt": "2026-08-17T05:52:31.552Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-20"
     },
     {
       "id": "discord-bot-shift-2026-08-21",
       "date": "2026-08-21",
-      "status": "off",
-      "updatedAt": "2026-08-17T05:51:08.528Z",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-08-17T05:52:31.552Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-21"
     },
@@ -1764,15 +1770,17 @@
       "id": "discord-bot-shift-2026-08-22",
       "date": "2026-08-22",
       "status": "off",
-      "updatedAt": "2026-08-17T05:51:08.528Z",
+      "updatedAt": "2026-08-17T05:52:31.552Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-22"
     },
     {
       "id": "discord-bot-shift-2026-08-23",
       "date": "2026-08-23",
-      "status": "off",
-      "updatedAt": "2026-08-17T05:51:08.528Z",
+      "status": "working",
+      "startTime": "10:00",
+      "endTime": "15:00",
+      "updatedAt": "2026-08-17T05:52:31.552Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-23"
     }
@@ -2005,6 +2013,27 @@
       }
     },
     {
+      "id": "discord-bot-schedule-off_to_work-2026-08-18-entry",
+      "date": "2026-08-18",
+      "detectedAt": "2026-08-17T05:52:31.552Z",
+      "type": "shift_update",
+      "title": "🔄 変更: 8/18 お休み -> 10:00-15:00",
+      "source": "discord-bot",
+      "sourceUrl": "https://m-surprise.com/profile/?id=4967",
+      "metadata": {
+        "category": "schedule",
+        "kind": "off_to_work",
+        "before": {
+          "type": "off"
+        },
+        "after": {
+          "type": "work",
+          "start": "10:00",
+          "end": "15:00"
+        }
+      }
+    },
+    {
       "id": "discord-bot-schedule-off_added-2026-08-19-entry",
       "date": "2026-08-19",
       "detectedAt": "2026-08-12T15:02:31.571Z",
@@ -2017,6 +2046,27 @@
         "kind": "off_added",
         "after": {
           "type": "off"
+        }
+      }
+    },
+    {
+      "id": "discord-bot-schedule-off_to_work-2026-08-19-entry",
+      "date": "2026-08-19",
+      "detectedAt": "2026-08-17T05:52:31.552Z",
+      "type": "shift_update",
+      "title": "🔄 変更: 8/19 お休み -> 10:00-15:00",
+      "source": "discord-bot",
+      "sourceUrl": "https://m-surprise.com/profile/?id=4967",
+      "metadata": {
+        "category": "schedule",
+        "kind": "off_to_work",
+        "before": {
+          "type": "off"
+        },
+        "after": {
+          "type": "work",
+          "start": "10:00",
+          "end": "15:00"
         }
       }
     },
@@ -2053,6 +2103,27 @@
       }
     },
     {
+      "id": "discord-bot-schedule-off_to_work-2026-08-21-entry",
+      "date": "2026-08-21",
+      "detectedAt": "2026-08-17T05:52:31.552Z",
+      "type": "shift_update",
+      "title": "🔄 変更: 8/21 お休み -> 10:00-15:00",
+      "source": "discord-bot",
+      "sourceUrl": "https://m-surprise.com/profile/?id=4967",
+      "metadata": {
+        "category": "schedule",
+        "kind": "off_to_work",
+        "before": {
+          "type": "off"
+        },
+        "after": {
+          "type": "work",
+          "start": "10:00",
+          "end": "15:00"
+        }
+      }
+    },
+    {
       "id": "discord-bot-schedule-off_added-2026-08-22-entry",
       "date": "2026-08-22",
       "detectedAt": "2026-08-15T15:02:31.972Z",
@@ -2065,6 +2136,27 @@
         "kind": "off_added",
         "after": {
           "type": "off"
+        }
+      }
+    },
+    {
+      "id": "discord-bot-schedule-off_to_work-2026-08-23-entry",
+      "date": "2026-08-23",
+      "detectedAt": "2026-08-17T05:52:31.552Z",
+      "type": "shift_update",
+      "title": "🔄 変更: 8/23 お休み -> 10:00-15:00",
+      "source": "discord-bot",
+      "sourceUrl": "https://m-surprise.com/profile/?id=4967",
+      "metadata": {
+        "category": "schedule",
+        "kind": "off_to_work",
+        "before": {
+          "type": "off"
+        },
+        "after": {
+          "type": "work",
+          "start": "10:00",
+          "end": "15:00"
         }
       }
     },
@@ -2109,7 +2201,7 @@
       "month": "2026-08",
       "nominationRank": null,
       "ratioRank": null,
-      "detectedAt": "2026-08-17T05:47:31.138Z"
+      "detectedAt": "2026-08-17T05:52:31.527Z"
     },
     "rankingSnapshots": [
       {
@@ -2346,7 +2438,7 @@
       },
       {
         "month": "2026-08",
-        "detectedAt": "2026-08-17T05:47:31.138Z",
+        "detectedAt": "2026-08-17T05:52:31.527Z",
         "nominationTop5": [
           {
             "rank": 1,
