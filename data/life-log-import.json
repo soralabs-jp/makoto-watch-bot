@@ -1,6 +1,6 @@
 {
   "source": "discord-bot",
-  "importedAt": "2026-08-24T06:26:22.188Z",
+  "importedAt": "2026-08-24T06:27:32.436Z",
   "shifts": [
     {
       "id": "fc2-history-2023-10-17",
@@ -1726,7 +1726,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "18:00",
-      "updatedAt": "2026-08-24T06:26:22.188Z",
+      "updatedAt": "2026-08-24T06:27:32.436Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-24"
     },
@@ -1736,7 +1736,7 @@
       "status": "working",
       "startTime": "13:00",
       "endTime": "22:30",
-      "updatedAt": "2026-08-24T06:26:22.188Z",
+      "updatedAt": "2026-08-24T06:27:32.436Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-25"
     },
@@ -1746,7 +1746,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "15:00",
-      "updatedAt": "2026-08-24T06:26:22.188Z",
+      "updatedAt": "2026-08-24T06:27:32.436Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-26"
     },
@@ -1754,7 +1754,7 @@
       "id": "discord-bot-shift-2026-08-27",
       "date": "2026-08-27",
       "status": "off",
-      "updatedAt": "2026-08-24T06:26:22.188Z",
+      "updatedAt": "2026-08-24T06:27:32.436Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-27"
     },
@@ -1764,7 +1764,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "20:00",
-      "updatedAt": "2026-08-24T06:26:22.188Z",
+      "updatedAt": "2026-08-24T06:27:32.436Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-28"
     },
@@ -1772,7 +1772,7 @@
       "id": "discord-bot-shift-2026-08-29",
       "date": "2026-08-29",
       "status": "off",
-      "updatedAt": "2026-08-24T06:26:22.188Z",
+      "updatedAt": "2026-08-24T06:27:32.436Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-29"
     },
@@ -1780,7 +1780,7 @@
       "id": "discord-bot-shift-2026-08-30",
       "date": "2026-08-30",
       "status": "off",
-      "updatedAt": "2026-08-24T06:26:22.188Z",
+      "updatedAt": "2026-08-24T06:27:32.436Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-08-30"
     }
@@ -2307,6 +2307,216 @@
       }
     },
     {
+      "id": "discord-bot-diary-added-2026-08-24-20491",
+      "date": "2026-08-24",
+      "detectedAt": "2026-08-24T06:27:32.436Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「賛否ありそう」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/20491/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "20491"
+      }
+    },
+    {
+      "id": "discord-bot-diary-added-2026-08-24-20543",
+      "date": "2026-08-24",
+      "detectedAt": "2026-08-24T06:27:32.436Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「おやつ」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/20543/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "20543"
+      }
+    },
+    {
+      "id": "discord-bot-diary-added-2026-08-24-20570",
+      "date": "2026-08-24",
+      "detectedAt": "2026-08-24T06:27:32.436Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「きょうはさつえい」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/20570/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "20570"
+      }
+    },
+    {
+      "id": "discord-bot-diary-added-2026-08-24-20597",
+      "date": "2026-08-24",
+      "detectedAt": "2026-08-24T06:27:32.436Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「ＮＯ」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/20597/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "20597"
+      }
+    },
+    {
+      "id": "discord-bot-diary-added-2026-08-24-20637",
+      "date": "2026-08-24",
+      "detectedAt": "2026-08-24T06:27:32.436Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「継続」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/20637/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "20637"
+      }
+    },
+    {
+      "id": "discord-bot-diary-added-2026-08-24-21007",
+      "date": "2026-08-24",
+      "detectedAt": "2026-08-24T06:27:32.436Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「シーズン」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/21007/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "21007"
+      }
+    },
+    {
+      "id": "discord-bot-diary-added-2026-08-24-21086",
+      "date": "2026-08-24",
+      "detectedAt": "2026-08-24T06:27:32.436Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「めりくり」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/21086/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "21086"
+      }
+    },
+    {
+      "id": "discord-bot-diary-added-2026-08-24-21129",
+      "date": "2026-08-24",
+      "detectedAt": "2026-08-24T06:27:32.436Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「気合い！」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/21129/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "21129"
+      }
+    },
+    {
+      "id": "discord-bot-diary-added-2026-08-24-21398",
+      "date": "2026-08-24",
+      "detectedAt": "2026-08-24T06:27:32.436Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「年明けてから一度も」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/21398/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "21398"
+      }
+    },
+    {
+      "id": "discord-bot-diary-added-2026-08-24-23029",
+      "date": "2026-08-24",
+      "detectedAt": "2026-08-24T06:27:32.436Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「ひさびさの」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/23029/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "23029"
+      }
+    },
+    {
+      "id": "discord-bot-diary-added-2026-08-24-23062",
+      "date": "2026-08-24",
+      "detectedAt": "2026-08-24T06:27:32.436Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「げきあつ」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/23062/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "23062"
+      }
+    },
+    {
+      "id": "discord-bot-diary-added-2026-08-24-23077",
+      "date": "2026-08-24",
+      "detectedAt": "2026-08-24T06:27:32.436Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「おやすみ」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/23077/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "23077"
+      }
+    },
+    {
+      "id": "discord-bot-diary-added-2026-08-24-23088",
+      "date": "2026-08-24",
+      "detectedAt": "2026-08-24T06:27:32.436Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「起きれなかったら」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/23088/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "23088"
+      }
+    },
+    {
+      "id": "discord-bot-diary-added-2026-08-24-23095",
+      "date": "2026-08-24",
+      "detectedAt": "2026-08-24T06:27:32.436Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「快挙なのでは……？？？」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/23095/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "23095"
+      }
+    },
+    {
+      "id": "discord-bot-diary-added-2026-08-24-23113",
+      "date": "2026-08-24",
+      "detectedAt": "2026-08-24T06:27:32.436Z",
+      "type": "diary",
+      "title": "📔 写メ日記更新: 「謎の」が追加されました",
+      "source": "discord-bot",
+      "sourceUrl": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/23113/",
+      "metadata": {
+        "category": "diary",
+        "kind": "added",
+        "eventId": "23113"
+      }
+    },
+    {
       "id": "discord-bot-schedule-off_added-2026-08-24-entry",
       "date": "2026-08-24",
       "detectedAt": "2026-08-17T15:02:31.169Z",
@@ -2508,7 +2718,7 @@
       "month": "2026-08",
       "nominationRank": null,
       "ratioRank": null,
-      "detectedAt": "2026-08-24T06:22:31.161Z"
+      "detectedAt": "2026-08-24T06:27:32.417Z"
     },
     "rankingSnapshots": [
       {
@@ -2745,7 +2955,7 @@
       },
       {
         "month": "2026-08",
-        "detectedAt": "2026-08-24T06:22:31.161Z",
+        "detectedAt": "2026-08-24T06:27:32.417Z",
         "nominationTop5": [
           {
             "rank": 1,
