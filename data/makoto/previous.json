@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-25T05:47:31.478Z",
+  "fetchedAt": "2026-09-25T05:52:31.617Z",
   "source": {
     "profileUrl": "https://m-surprise.com/profile/?id=4967",
     "rankingUrl": "https://m-surprise.com/ranking/",
@@ -69,6 +69,13 @@
     }
   },
   "diary": [
+    {
+      "id": "30888",
+      "title": "緊急で",
+      "url": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/30888/",
+      "image": "https://diary.m-surprise.com/wp-content/uploads/image0-2510-150x150.jpeg",
+      "date": "2026-09-25"
+    },
     {
       "id": "27905",
       "title": "ゆかた！",
@@ -166,13 +173,6 @@
       "url": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/23575/",
       "image": "https://diary.m-surprise.com/wp-content/uploads/image0-1740-150x150.jpeg",
       "date": "2025-07-02"
-    },
-    {
-      "id": "23389",
-      "title": "サボり魔",
-      "url": "https://diary.m-surprise.com/no-75-%e3%81%be%e3%81%93%e3%81%a8/23389/",
-      "image": "https://diary.m-surprise.com/wp-content/uploads/image0-1707-150x150.jpeg",
-      "date": "2025-06-19"
     }
   ],
   "rankings": {
@@ -180,7 +180,7 @@
       "month": "2026-09",
       "nominationRank": null,
       "ratioRank": null,
-      "detectedAt": "2026-09-25T05:47:31.460Z"
+      "detectedAt": "2026-09-25T05:52:31.599Z"
     },
     "rankingSnapshots": [
       {
@@ -475,7 +475,7 @@
       },
       {
         "month": "2026-09",
-        "detectedAt": "2026-09-25T05:47:31.460Z",
+        "detectedAt": "2026-09-25T05:52:31.599Z",
         "nominationTop5": [
           {
             "rank": 1,
