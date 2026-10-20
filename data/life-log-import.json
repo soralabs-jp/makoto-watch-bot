@@ -1721,6 +1721,16 @@
       "sourceId": "schedule:2026-06-05"
     },
     {
+      "id": "discord-bot-shift-2026-06-19",
+      "date": "2026-06-19",
+      "status": "working",
+      "startTime": "12:00",
+      "endTime": "17:00",
+      "updatedAt": "2026-06-19T00:44:00+09:00",
+      "source": "discord-bot",
+      "sourceId": "schedule:2026-06-19"
+    },
+    {
       "id": "discord-bot-shift-2026-10-21",
       "date": "2026-10-21",
       "status": "working",
