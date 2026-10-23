@@ -27,6 +27,7 @@ permissions:
 jobs:
   watch:
     runs-on: ubuntu-24.04
+    timeout-minutes: 12
     env:
       TARGET: ${{ github.event.inputs.target || 'makoto' }}
 
@@ -44,12 +45,17 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
+        timeout-minutes: 2
         run: npm ci
 
       - name: Install Playwright browser
-        run: npx playwright install --with-deps chromium
+        timeout-minutes: 3
+        env:
+          PLAYWRIGHT_DOWNLOAD_CONNECTION_TIMEOUT: 30000
+        run: npx playwright install --with-deps --only-shell chromium
 
       - name: Run watcher
+        timeout-minutes: 5
         env:
           DISCORD_WEBHOOK_URL_MAKOTO: ${{ secrets.DISCORD_WEBHOOK_URL_MAKOTO || secrets.DISCORD_WEBHOOK_URL }}
           DISCORD_WEBHOOK_URL_MIKI: ${{ secrets.DISCORD_WEBHOOK_URL_MIKI }}
