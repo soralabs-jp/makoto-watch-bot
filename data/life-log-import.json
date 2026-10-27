@@ -1,6 +1,6 @@
 {
   "source": "discord-bot",
-  "importedAt": "2026-10-27T22:51:05.867Z",
+  "importedAt": "2026-10-27T22:56:08.283Z",
   "shifts": [
     {
       "id": "fc2-history-2023-10-17",
@@ -1733,10 +1733,8 @@
     {
       "id": "discord-bot-shift-2026-10-28",
       "date": "2026-10-28",
-      "status": "working",
-      "startTime": "10:00",
-      "endTime": "16:00",
-      "updatedAt": "2026-10-27T22:51:05.867Z",
+      "status": "off",
+      "updatedAt": "2026-10-27T22:56:08.283Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-10-28"
     },
@@ -1744,7 +1742,7 @@
       "id": "discord-bot-shift-2026-10-29",
       "date": "2026-10-29",
       "status": "off",
-      "updatedAt": "2026-10-27T22:51:05.867Z",
+      "updatedAt": "2026-10-27T22:56:08.283Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-10-29"
     },
@@ -1754,7 +1752,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "17:00",
-      "updatedAt": "2026-10-27T22:51:05.867Z",
+      "updatedAt": "2026-10-27T22:56:08.283Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-10-30"
     },
@@ -1762,7 +1760,7 @@
       "id": "discord-bot-shift-2026-10-31",
       "date": "2026-10-31",
       "status": "off",
-      "updatedAt": "2026-10-27T22:51:05.867Z",
+      "updatedAt": "2026-10-27T22:56:08.283Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-10-31"
     },
@@ -1770,23 +1768,23 @@
       "id": "discord-bot-shift-2026-11-01",
       "date": "2026-11-01",
       "status": "off",
-      "updatedAt": "2026-10-27T22:51:05.867Z",
+      "updatedAt": "2026-10-27T22:56:08.283Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-11-01"
     },
     {
       "id": "discord-bot-shift-2026-11-02",
       "date": "2026-11-02",
-      "status": "pending",
-      "updatedAt": "2026-10-27T22:51:05.867Z",
+      "status": "off",
+      "updatedAt": "2026-10-27T22:56:08.283Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-11-02"
     },
     {
       "id": "discord-bot-shift-2026-11-03",
       "date": "2026-11-03",
-      "status": "pending",
-      "updatedAt": "2026-10-27T22:51:05.867Z",
+      "status": "off",
+      "updatedAt": "2026-10-27T22:56:08.283Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-11-03"
     }
@@ -4628,6 +4626,27 @@
       }
     },
     {
+      "id": "discord-bot-schedule-work_to_off-2026-10-28-entry",
+      "date": "2026-10-28",
+      "detectedAt": "2026-10-27T22:56:08.283Z",
+      "type": "day_off",
+      "title": "❌ 出勤キャンセル: 10/28 10:00-16:00 -> お休み",
+      "source": "discord-bot",
+      "sourceUrl": "https://m-surprise.com/profile/?id=4967",
+      "metadata": {
+        "category": "schedule",
+        "kind": "work_to_off",
+        "before": {
+          "type": "work",
+          "start": "10:00",
+          "end": "16:00"
+        },
+        "after": {
+          "type": "off"
+        }
+      }
+    },
+    {
       "id": "discord-bot-schedule-off_added-2026-10-29-entry",
       "date": "2026-10-29",
       "detectedAt": "2026-10-22T15:21:31.816Z",
@@ -4729,6 +4748,25 @@
       }
     },
     {
+      "id": "discord-bot-schedule-pending_to_off-2026-11-02-entry",
+      "date": "2026-11-02",
+      "detectedAt": "2026-10-27T22:56:08.283Z",
+      "type": "day_off",
+      "title": "🔄 変更: 11/2 要確認 -> お休み",
+      "source": "discord-bot",
+      "sourceUrl": "https://m-surprise.com/profile/?id=4967",
+      "metadata": {
+        "category": "schedule",
+        "kind": "pending_to_off",
+        "before": {
+          "type": "pending"
+        },
+        "after": {
+          "type": "off"
+        }
+      }
+    },
+    {
       "id": "discord-bot-schedule-pending_added-2026-11-03-entry",
       "date": "2026-11-03",
       "detectedAt": "2026-10-27T15:01:05.335Z",
@@ -4743,6 +4781,25 @@
           "type": "pending"
         }
       }
+    },
+    {
+      "id": "discord-bot-schedule-pending_to_off-2026-11-03-entry",
+      "date": "2026-11-03",
+      "detectedAt": "2026-10-27T22:56:08.283Z",
+      "type": "day_off",
+      "title": "🔄 変更: 11/3 要確認 -> お休み",
+      "source": "discord-bot",
+      "sourceUrl": "https://m-surprise.com/profile/?id=4967",
+      "metadata": {
+        "category": "schedule",
+        "kind": "pending_to_off",
+        "before": {
+          "type": "pending"
+        },
+        "after": {
+          "type": "off"
+        }
+      }
     }
   ],
   "rankings": {
@@ -4750,7 +4807,7 @@
       "month": "2026-10",
       "nominationRank": null,
       "ratioRank": null,
-      "detectedAt": "2026-10-27T22:51:05.817Z"
+      "detectedAt": "2026-10-27T22:56:08.254Z"
     },
     "rankingSnapshots": [
       {
@@ -5103,7 +5160,7 @@
       },
       {
         "month": "2026-10",
-        "detectedAt": "2026-10-27T22:51:05.817Z",
+        "detectedAt": "2026-10-27T22:56:08.254Z",
         "nominationTop5": [
           {
             "rank": 1,
