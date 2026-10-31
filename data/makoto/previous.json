@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-31T14:31:01.679Z",
+  "fetchedAt": "2026-10-31T14:36:02.186Z",
   "source": {
     "profileUrl": "https://m-surprise.com/profile/?id=4967",
     "rankingUrl": "https://m-surprise.com/ranking/",
@@ -180,7 +180,7 @@
       "month": "2026-10",
       "nominationRank": null,
       "ratioRank": null,
-      "detectedAt": "2026-10-31T14:31:01.663Z"
+      "detectedAt": "2026-10-31T14:36:02.127Z"
     },
     "rankingSnapshots": [
       {
@@ -533,7 +533,7 @@
       },
       {
         "month": "2026-10",
-        "detectedAt": "2026-10-31T14:31:01.663Z",
+        "detectedAt": "2026-10-31T14:36:02.127Z",
         "nominationTop5": [
           {
             "rank": 1,
@@ -547,25 +547,25 @@
           },
           {
             "rank": 3,
+            "castNo": 48,
+            "castName": "りの"
+          },
+          {
+            "rank": 4,
             "castNo": 42,
             "castName": "りこ"
           },
           {
-            "rank": 4,
-            "castNo": 15,
-            "castName": "ひまり"
-          },
-          {
             "rank": 5,
-            "castNo": 20,
-            "castName": "まふゆ"
+            "castNo": 54,
+            "castName": "りほ"
           }
         ],
         "ratioTop5": [
           {
             "rank": 1,
-            "castNo": 17,
-            "castName": "りり"
+            "castNo": 48,
+            "castName": "りの"
           },
           {
             "rank": 2,
@@ -574,18 +574,18 @@
           },
           {
             "rank": 3,
+            "castNo": 17,
+            "castName": "りり"
+          },
+          {
+            "rank": 4,
             "castNo": 15,
             "castName": "ひまり"
           },
           {
-            "rank": 4,
+            "rank": 5,
             "castNo": 54,
             "castName": "りほ"
-          },
-          {
-            "rank": 5,
-            "castNo": 42,
-            "castName": "りこ"
           }
         ]
       }
