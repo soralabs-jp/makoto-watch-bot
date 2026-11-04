@@ -1,6 +1,6 @@
 {
   "source": "discord-bot",
-  "importedAt": "2026-11-04T21:06:11.220Z",
+  "importedAt": "2026-11-04T21:11:09.908Z",
   "shifts": [
     {
       "id": "fc2-history-2023-10-17",
@@ -1734,7 +1734,7 @@
       "id": "discord-bot-shift-2026-11-05",
       "date": "2026-11-05",
       "status": "off",
-      "updatedAt": "2026-11-04T21:06:11.220Z",
+      "updatedAt": "2026-11-04T21:11:09.908Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-11-05"
     },
@@ -1744,7 +1744,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "17:00",
-      "updatedAt": "2026-11-04T21:06:11.220Z",
+      "updatedAt": "2026-11-04T21:11:09.908Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-11-06"
     },
@@ -1754,7 +1754,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "17:00",
-      "updatedAt": "2026-11-04T21:06:11.220Z",
+      "updatedAt": "2026-11-04T21:11:09.908Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-11-07"
     },
@@ -1764,7 +1764,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "18:00",
-      "updatedAt": "2026-11-04T21:06:11.220Z",
+      "updatedAt": "2026-11-04T21:11:09.908Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-11-08"
     },
@@ -1774,7 +1774,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "18:00",
-      "updatedAt": "2026-11-04T21:06:11.220Z",
+      "updatedAt": "2026-11-04T21:11:09.908Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-11-09"
     },
@@ -1784,7 +1784,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "18:00",
-      "updatedAt": "2026-11-04T21:06:11.220Z",
+      "updatedAt": "2026-11-04T21:11:09.908Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-11-10"
     },
@@ -1794,7 +1794,7 @@
       "status": "working",
       "startTime": "10:00",
       "endTime": "20:00",
-      "updatedAt": "2026-11-04T21:06:11.220Z",
+      "updatedAt": "2026-11-04T21:11:09.908Z",
       "source": "discord-bot",
       "sourceId": "schedule:2026-11-11"
     }
@@ -5102,7 +5102,7 @@
       "month": "2026-10",
       "nominationRank": null,
       "ratioRank": null,
-      "detectedAt": "2026-11-04T21:06:11.190Z"
+      "detectedAt": "2026-11-04T21:11:09.852Z"
     },
     "rankingSnapshots": [
       {
@@ -5455,7 +5455,7 @@
       },
       {
         "month": "2026-10",
-        "detectedAt": "2026-11-04T21:06:11.190Z",
+        "detectedAt": "2026-11-04T21:11:09.852Z",
         "nominationTop5": [
           {
             "rank": 1,
